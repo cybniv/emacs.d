@@ -3,9 +3,6 @@
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
 (package-initialize) 
 
-;; load external configs
-(load "~/.emacs.d/load.el")
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -161,7 +158,6 @@ SCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))
  '(projectile-globally-ignored-directories
    (quote
     (".idea" ".ensime_cache" ".eunit" ".git" ".hg" ".fslckout" "_FOSSIL_" ".bzr" "_darcs" ".tox" ".svn" ".stack-work" "fixtures")))
- '(projectile-mode t nil (projectile))
  '(psession-autosave-mode t)
  '(psession-mode t)
  '(psession-savehist-mode t)
@@ -198,9 +194,12 @@ SCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))
 ; (add-to-list 'default-frame-alist '(alpha . (97 . 50)))
 ; (set-frame-parameter (selected-frame) 'alpha '(97 . 50))
 
+;; load external configs
+(load "~/.emacs.d/load.el")
 (load "~/.emacs.d/keys.el")
 (load "~/.emacs.d/functions.el")
 (load "~/.emacs.d/hooks.el")
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

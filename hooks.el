@@ -26,10 +26,6 @@
                "\\(class\\|def\\|do\\|if\\)" "\\(end\\)" "#"
                (lambda (arg) (ruby-end-of-block)) nil))
 
-(powerline-default-theme)
-(mu4e-maildirs-extension)
-(add-hook 'org-mode-hook 'org-bullets-mode)
-
 ;;store link to message if in header view, not to header query
 (setq org-mu4e-link-query-in-headers-mode nil)
 
@@ -45,9 +41,14 @@
 
 (add-hook 'dired-mode-hook 'turn-on-gnus-dired-mode)
 
+(powerline-default-theme)
+(mu4e-maildirs-extension)
+(add-hook 'org-mode-hook 'org-bullets-mode)
+(projectile-mode)
 (powerline-reset)
 (helm-projectile-on)
+(dumb-jump-mode)
 
 ;; (eval-after-load 'tramp '(setenv "SHELL" "/bin/bash"))
 
-(dumb-jump-mode)
+
