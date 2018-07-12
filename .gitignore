@@ -1,0 +1,14 @@
+# emacs backup files
+*~
+*#
+
+elisp-objects
+elpa
+eshell
+projectile.cache
+projectile-bookmarks.eld
+recentf
+tramp
+.org-id-locations
+bookmarks
+eww-bookmarks
