@@ -11,17 +11,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ansi-color-names-vector
-   ["#1b2b34" "#ec5f67" "#99c794" "#fac863" "#6699cc" "#c594c5" "#6699cc" "#c0c5ce"])
- '(ansi-term-color-vector
-   [unspecified "#1b2b34" "#ec5f67" "#99c794" "#fac863" "#6699cc" "#c594c5" "#6699cc" "#c0c5ce"] t)
  '(beacon-mode t)
  '(browse-url-browser-function (quote browse-url-default-browser))
  '(compilation-message-face (quote default))
- '(cua-global-mark-cursor-color "#2aa198")
- '(cua-normal-cursor-color "#657b83")
- '(cua-overwrite-cursor-color "#b58900")
- '(cua-read-only-cursor-color "#859900")
  '(current-language-environment "UTF-8")
  '(custom-enabled-themes (quote (doom-molokai)))
  '(custom-safe-themes
@@ -32,9 +24,6 @@
     (name old-name general-category decomposition decimal-digit-value digit-value numeric-value mirrored iso-10646-comment)))
  '(dired-listing-switches "-alhv --group-directories-first")
  '(doc-view-scale-internally nil)
- '(el-get-allow-insecure nil)
- '(el-get-verbose t)
- '(fci-rule-color "#37474f")
  '(font-use-system-font t)
  '(global-company-mode t)
  '(global-undo-tree-mode t)
@@ -49,31 +38,6 @@
  '(helm-autoresize-mode t)
  '(helm-mode t)
  '(helm-projectile-fuzzy-match nil)
- '(highlight-changes-colors (quote ("#d33682" "#6c71c4")))
- '(highlight-symbol-colors
-   (--map
-    (solarized-color-blend it "#fdf6e3" 0.25)
-    (quote
-     ("#b58900" "#2aa198" "#dc322f" "#6c71c4" "#859900" "#cb4b16" "#268bd2"))))
- '(highlight-symbol-foreground-color "#586e75")
- '(highlight-tail-colors
-   (quote
-    (("#eee8d5" . 0)
-     ("#B4C342" . 20)
-     ("#69CABF" . 30)
-     ("#69B7F0" . 50)
-     ("#DEB542" . 60)
-     ("#F2804F" . 70)
-     ("#F771AC" . 85)
-     ("#eee8d5" . 100))))
- '(hl-bg-colors
-   (quote
-    ("#DEB542" "#F2804F" "#FF6E64" "#F771AC" "#9EA0E5" "#69B7F0" "#69CABF" "#B4C342")))
- '(hl-fg-colors
-   (quote
-    ("#fdf6e3" "#fdf6e3" "#fdf6e3" "#fdf6e3" "#fdf6e3" "#fdf6e3" "#fdf6e3" "#fdf6e3")))
- '(hl-paren-colors (quote ("#2aa198" "#b58900" "#268bd2" "#6c71c4" "#859900")))
- '(ido-vertical-mode t)
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(magit-diff-use-overlays nil)
@@ -137,12 +101,9 @@
  '(mu4e-view-date-format "%a, %d.%b.%Y %H:%M:%S")
  '(mu4e-view-show-addresses t)
  '(mu4e-view-show-images t)
- '(nrepl-message-colors
-   (quote
-    ("#dc322f" "#cb4b16" "#b58900" "#546E00" "#B4C342" "#00629D" "#2aa198" "#d33682" "#6c71c4")))
  '(org-agenda-files
    (quote
-    ("~/Dropbox/orgzly/Inbox.org" "***REMOVED******REMOVED***/.org/mukke.org" "***REMOVED******REMOVED***/.org/***REMOVED***.org" "***REMOVED******REMOVED***/.org/tech.org" "***REMOVED******REMOVED***/.org/todo.org" "***REMOVED******REMOVED***/.org/uni.org")))
+    ("***REMOVED******REMOVED***/.org/mukke.org" "***REMOVED******REMOVED***/.org/tech.org" "***REMOVED******REMOVED***/.org/todo.org" "***REMOVED******REMOVED***/.org/uni.org")))
  '(org-agenda-skip-deadline-prewarning-if-scheduled t)
  '(org-agenda-skip-scheduled-if-deadline-is-shown t)
  '(org-agenda-skip-scheduled-if-done t)
@@ -162,12 +123,6 @@
    (quote
     (("t" "todo" entry
       (file+headline "~/.org/todo.org" "Tasks")
-      "* TODO [#A] %?
-SCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))
-%a
-     ")
-     ("s" "***REMOVED***" entry
-      (file+headline "~/.org/***REMOVED***.org" "Tasks")
       "* TODO [#A] %?
 SCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))
 %a
@@ -197,12 +152,10 @@ SCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))
  '(org-tree-slide-fold-subtrees-skipped nil)
  '(package-selected-packages
    (quote
-    (helm-pass dumb-jump org-tree-slide company-box twittering-mode mu4e-jump-to-list rainbow-delimiters zenburn-theme moe-theme doom-themes monokai-theme gruvbox-theme solarized-theme dracula-theme psession rspec-mode ruby-tools ruby-hash-syntax yard-mode yafolding projectile helm-ag helm ag lua-mode web-mode js2-mode yaml-mode org-bullets magit coffee-mode nord-theme sr-speedbar pdf-tools org-plus-contrib hacker-typer hack-time-mode ido-completing-read+ paradox mu4e-maildirs-extension powerline base16-theme beacon org undo-tree)))
+    (zenburn-theme yard-mode yaml-mode yafolding web-mode undo-tree twittering-mode solarized-theme ruby-tools ruby-hash-syntax rspec-mode rainbow-delimiters psession powerline paradox org-tree-slide org-plus-contrib org-bullets nord-theme mu4e-maildirs-extension mu4e-jump-to-list monokai-theme moe-theme magit lua-mode js2-mode helm-projectile helm-pass helm-ag gruvbox-theme dumb-jump dracula-theme doom-themes company-box coffee-mode base16-theme ag)))
  '(paradox-column-width-package 27)
  '(paradox-execute-asynchronously nil)
  '(paradox-github-token t)
- '(pos-tip-background-color "#eee8d5")
- '(pos-tip-foreground-color "#586e75")
  '(projectile-completion-system (quote helm))
  '(projectile-enable-caching t)
  '(projectile-globally-ignored-directories
@@ -213,12 +166,11 @@ SCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))
  '(psession-mode t)
  '(psession-savehist-mode t)
  '(recentf-max-menu-items 27)
- '(recentf-max-saved-items 500)
+ '(recentf-max-saved-items 100)
  '(recentf-mode t)
  '(ruby-insert-encoding-magic-comment nil)
  '(scroll-bar-mode nil)
  '(show-paren-mode t)
- '(smartrep-mode-line-active-bg (solarized-color-blend "#859900" "#eee8d5" 0.2))
  '(smtpmail-debug-info t)
  '(smtpmail-default-smtp-server "smtp.mailbox.org")
  '(smtpmail-smtp-server "smtp.mailbox.org")
@@ -227,55 +179,24 @@ SCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))
  '(solarized-distinct-doc-face t)
  '(solarized-distinct-fringe-background t)
  '(solarized-use-less-bold t)
- '(term-default-bg-color "#fdf6e3")
- '(term-default-fg-color "#657b83")
  '(tool-bar-mode nil)
  '(tramp-default-method "ssh" nil (tramp))
  '(truncate-lines t)
  '(uniquify-strip-common-suffix nil)
  '(user-full-name "***REMOVED***")
  '(user-mail-address "***REMOVED***")
- '(vc-annotate-background nil)
- '(vc-annotate-background-mode nil)
- '(vc-annotate-color-map
-   (quote
-    ((20 . "#f36c60")
-     (40 . "#ff9800")
-     (60 . "#fff59d")
-     (80 . "#8bc34a")
-     (100 . "#81d4fa")
-     (120 . "#4dd0e1")
-     (140 . "#b39ddb")
-     (160 . "#f36c60")
-     (180 . "#ff9800")
-     (200 . "#fff59d")
-     (220 . "#8bc34a")
-     (240 . "#81d4fa")
-     (260 . "#4dd0e1")
-     (280 . "#b39ddb")
-     (300 . "#f36c60")
-     (320 . "#ff9800")
-     (340 . "#fff59d")
-     (360 . "#8bc34a"))))
- '(vc-annotate-very-old-color nil)
  '(visible-bell t)
- '(weechat-color-list
-   (quote
-    (unspecified "#fdf6e3" "#eee8d5" "#990A1B" "#dc322f" "#546E00" "#859900" "#7B6000" "#b58900" "#00629D" "#268bd2" "#93115C" "#d33682" "#00736F" "#2aa198" "#657b83" "#839496")))
- '(word-wrap t)
- '(xterm-color-names
-   ["#eee8d5" "#dc322f" "#859900" "#b58900" "#268bd2" "#d33682" "#2aa198" "#073642"])
- '(xterm-color-names-bright
-   ["#fdf6e3" "#cb4b16" "#93a1a1" "#839496" "#657b83" "#6c71c4" "#586e75" "#002b36"]))
+ '(word-wrap t))
 
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
+(put 'narrow-to-region 'disabled nil)
 
 ;; start maximized
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 ;; start transparent
-(add-to-list 'default-frame-alist '(alpha . (97 . 50)))
-(set-frame-parameter (selected-frame) 'alpha '(97 . 50))
+; (add-to-list 'default-frame-alist '(alpha . (97 . 50)))
+; (set-frame-parameter (selected-frame) 'alpha '(97 . 50))
 
 (load "~/.emacs.d/keys.el")
 (load "~/.emacs.d/functions.el")
@@ -286,4 +207,3 @@ SCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-(put 'narrow-to-region 'disabled nil)
