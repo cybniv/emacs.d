@@ -1,6 +1,5 @@
 ; define keys
 (global-set-key [f2] 'undo)
-(global-set-key [f3] 'helm-find-files)
 
 (global-set-key [f4] 'ag)
 ;; (global-set-key [f5] 'find-grep)
@@ -28,9 +27,13 @@
 (autoload 'ibuffer "ibuffer" "List buffers." t)
 
 ;; helm
+(global-set-key [f3] 'helm-find-files)
 (global-set-key (kbd "C-x b") 'helm-mini)
 (global-set-key (kbd "C-c h") 'helm-command-prefix)
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
+(global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "C-c h o") 'helm-occur)
+(global-set-key (kbd "C-c h g") 'helm-google-suggest)
 ;; (global-set-key (kbd "C-x C-f") 'helm-find-files)
 
 ;; recentf
