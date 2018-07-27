@@ -18,8 +18,7 @@
 (global-set-key [(meta &)] 'query-replace-regexp)
 (global-set-key "\C-xw" 'what-line)
 (global-set-key [C-tab] 'other-window)
-(global-set-key "\C-\M-l" 'switch-to-buffer-other-window)
-(global-set-key [C-return] 'completion-at-point)
+(global-set-key [C-return] 'company-complete)
 (global-set-key (kbd "C-x g") 'magit-status)
 
 ;; ibuffer
@@ -54,9 +53,10 @@
 
 (global-set-key (kbd "C-c t") 'toggle-transparency)
 
-(defvar yafolding-mode-map
-  (let ((map (make-sparse-keymap)))
-    (define-key map (kbd "<C-S-return>") #'yafolding-hide-parent-element)
-    (define-key map (kbd "<C-M-return>") #'yafolding-toggle-all)
-    (define-key map (kbd "<C-return>") #'yafolding-toggle-element)
-    map))
+;; yafolding
+(define-key yafolding-mode-map (kbd "<C-S-return>") nil)
+(define-key yafolding-mode-map (kbd "<C-M-return>") nil)
+(define-key yafolding-mode-map (kbd "<C-return>") nil)
+;; (define-key yafolding-mode-map (kbd "C-c <C-M-return>") 'yafolding-toggle-all)
+;; (define-key yafolding-mode-map (kbd "C-c <C-S-return>") 'yafolding-hide-parent-element)
+(define-key yafolding-mode-map (kbd "<C-M-return>") 'yafolding-toggle-element)
