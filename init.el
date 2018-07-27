@@ -73,8 +73,9 @@
  '(mu4e-compose-signature "Cheers
 ***REMOVED***
 ")
+ '(mu4e-context-policy (quote ask))
  '(mu4e-date-format-long "%a, %d.%b.%Y %H:%M:%S")
- '(mu4e-drafts-folder "/Drafts")
+ '(mu4e-drafts-folder "/mborg/Drafts")
  '(mu4e-get-mail-command "mbsync -a")
  '(mu4e-headers-date-format "%a, %d.%b.%y")
  '(mu4e-headers-fields
@@ -90,10 +91,12 @@
    (quote
     (flagged new passed replied seen attach encrypted signed unread)))
  '(mu4e-headers-visible-lines 20)
- '(mu4e-maildir "***REMOVED******REMOVED***/.mail/mborg")
+ '(mu4e-html2text-command
+   "html2text --ignore-images --protect-links --unicode-snob --no-automatic-links --no-wrap-links --reference-links --mark-code")
+ '(mu4e-maildir "***REMOVED******REMOVED***/.mail/")
  '(mu4e-maildirs-extension-use-bookmarks t)
- '(mu4e-sent-folder "/Sent")
- '(mu4e-trash-folder "/Trash")
+ '(mu4e-sent-folder "/mborg/Sent")
+ '(mu4e-trash-folder "/mborg/Trash")
  '(mu4e-user-mail-address-list
    (quote
     ("***REMOVED***" "***REMOVED***" "***REMOVED***")))
@@ -151,7 +154,7 @@ SCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))
  '(org-tree-slide-fold-subtrees-skipped nil)
  '(package-selected-packages
    (quote
-    (zenburn-theme yard-mode yaml-mode yafolding web-mode undo-tree twittering-mode solarized-theme ruby-tools ruby-hash-syntax rspec-mode rainbow-delimiters psession powerline paradox org-tree-slide org-plus-contrib org-bullets nord-theme mu4e-maildirs-extension mu4e-jump-to-list monokai-theme moe-theme magit lua-mode js2-mode helm-projectile helm-pass helm-ag gruvbox-theme dumb-jump dracula-theme doom-themes company-box coffee-mode base16-theme ag)))
+    (markdown-mode undo-tree chruby company-inf-ruby inf-ruby auctex company-auctex haml-mode zenburn-theme yard-mode yaml-mode yafolding web-mode twittering-mode solarized-theme ruby-tools ruby-hash-syntax rspec-mode rainbow-delimiters psession powerline paradox org-tree-slide org-plus-contrib org-bullets nord-theme mu4e-maildirs-extension mu4e-jump-to-list monokai-theme moe-theme magit lua-mode js2-mode helm-projectile helm-pass helm-ag gruvbox-theme dumb-jump dracula-theme doom-themes company-box coffee-mode base16-theme ag)))
  '(paradox-column-width-package 27)
  '(paradox-execute-asynchronously nil)
  '(paradox-github-token t)
@@ -209,9 +212,57 @@ SCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(default ((t (:family "DejaVu Sans Mono" :foundry "PfEd" :slant normal :weight normal :height 98 :width normal)))))
+
 ;; use mupdf as default PDF viewer
 (with-eval-after-load "tex"
   (add-to-list 'TeX-view-program-list '("mupdf" "/usr/bin/mupdf %o"))
   (setcdr (assq 'output-pdf TeX-view-program-selection) '("mupdf")))
 
+
+(setq mu4e-contexts
+      `( ,(make-mu4e-context
+           :name "mborg"
+           :enter-func (lambda () (mu4e-message "switching to private context"))
+           ;; :leave-func (lambda () (mu4e-message "Leaving Private context"))
+           ;; we match based on the contact-fields of the message
+           :match-func (lambda (msg)
+                         (when msg
+                           (string-match-p "^/mborg" (mu4e-message-field msg :maildir))))
+           ;; :match-func (lambda (msg)
+           ;;               (when msg 
+           ;;                 (mu4e-message-contact-field-matches msg 
+           ;;                                                     :to "***REMOVED***")))
+           :vars '( ( user-mail-address      . "***REMOVED***"  )
+                    ( user-full-name         . "***REMOVED***" )
+                    ( mu4e-compose-signature .
+                                             (concat
+                                              "Sincerely\n"
+                                              "***REMOVED***\n"))))
+         ,(make-mu4e-context
+           :name "***REMOVED***"
+           :enter-func (lambda () (mu4e-message "switching to ***REMOVED*** context"))
+           ;; no leave-func
+           ;; we match based on the maildir of the message
+           ;; this matches maildir /Arkham and its sub-directories
+           :match-func (lambda (msg)
+                         (when msg
+                           (string-match-p "^/***REMOVED***" (mu4e-message-field msg :maildir))))
+           :vars '( ( user-mail-address       . "***REMOVED***" )
+                    ( user-full-name          . "***REMOVED***" )
+                    ( mu4e-compose-signature  .
+                                              (concat
+                                               "\n"
+                                               "***REMOVED***\n"
+                                               "Entwicklung / Development\n"
+                                               "***REMOVED*** publishing services GmbH\n"
+                                               "***REMOVED***, ***REMOVED*** ***REMOVED***, Germany\n"
+***REMOVED***
+                                               "***REMOVED***, https://www.***REMOVED***.de\n"
+                                               "\n"
+***REMOVED***
+                                               "Registernummer / Registration Number: HRB 24930\n"
+                                               "\n"
+                                               "Geschäftsführer: ***REMOVED***, ***REMOVED***, ***REMOVED***"
+                                               ))))
+         ))
