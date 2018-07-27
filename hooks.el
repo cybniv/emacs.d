@@ -44,11 +44,11 @@
 (powerline-default-theme)
 (mu4e-maildirs-extension)
 (add-hook 'org-mode-hook 'org-bullets-mode)
+(setq org-bullets-bullet-list
+      '("◉" "◎" "⚫" "○" "►" "◇"))
 (projectile-mode)
 (powerline-reset)
 (helm-projectile-on)
 (dumb-jump-mode)
 
 ;; (eval-after-load 'tramp '(setenv "SHELL" "/bin/bash"))
-
-
