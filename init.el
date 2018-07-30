@@ -65,15 +65,12 @@
      ("date:today..now" "Today's messages" 116)
      ("date:7d..now" "Last 7 days" 119)
      ("flag:unread AND NOT flag:trashed AND NOT flag:list" "not MailingLists unread" 110)
-     ("list:fulldisclosure.seclists.org OR list:arch-security.archlinux.org OR list:dev.nmap.org OR list:bugtraq.list-id.securityfocus.com OR list:bugtraq@securityfocus.com" "SecLists" 115)
-     ("flag:unread AND list:***REMOVED***-members@***REMOVED***" "***REMOVED***-members" 109)
-     ("flag:unread AND list:***REMOVED***-discuss@***REMOVED***" "***REMOVED***-discuss" 100)
-     ("flag:unread AND list:***REMOVED***-vorstand@***REMOVED***" "***REMOVED***-vorstand" 118))))
+     ("list:fulldisclosure.seclists.org OR list:arch-security.archlinux.org OR list:dev.nmap.org OR list:bugtraq.list-id.securityfocus.com OR list:bugtraq@securityfocus.com" "SecLists" 115))))
  '(mu4e-change-filenames-when-moving t)
  '(mu4e-compose-signature "Cheers
 ***REMOVED***
 ")
- '(mu4e-context-policy (quote ask))
+ '(mu4e-context-policy (quote pick-first))
  '(mu4e-date-format-long "%a, %d.%b.%Y %H:%M:%S")
  '(mu4e-drafts-folder "/mborg/Drafts")
  '(mu4e-get-mail-command "mbsync -a")
