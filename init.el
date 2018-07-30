@@ -89,7 +89,7 @@
     (flagged new passed replied seen attach encrypted signed unread)))
  '(mu4e-headers-visible-lines 20)
  '(mu4e-html2text-command
-   "html2text --ignore-images --protect-links --unicode-snob --no-automatic-links --no-wrap-links --reference-links --mark-code")
+   "html2text -b0 --ignore-images --protect-links --reference-links --no-wrap-links --links-after-para --unicode-snob --mark-code --ignore-tables")
  '(mu4e-maildir "***REMOVED******REMOVED***/.mail/")
  '(mu4e-maildirs-extension-use-bookmarks t)
  '(mu4e-sent-folder "/mborg/Sent")
