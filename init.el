@@ -39,6 +39,7 @@
  '(helm-projectile-fuzzy-match nil)
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
+ '(ispell-dictionary "deutsch")
  '(magit-diff-use-overlays nil)
  '(message-citation-line-format "On %d %b %Y at %R %z, %f wrote:
 ")
@@ -152,7 +153,7 @@ SCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))
  '(org-tree-slide-fold-subtrees-skipped nil)
  '(package-selected-packages
    (quote
-    (mu4e-query-fragments markdown-mode chruby inf-ruby auctex company-auctex haml-mode zenburn-theme yard-mode yaml-mode yafolding web-mode solarized-theme ruby-tools ruby-hash-syntax rspec-mode rainbow-delimiters psession powerline paradox org-tree-slide org-plus-contrib org-bullets nord-theme mu4e-maildirs-extension mu4e-jump-to-list monokai-theme moe-theme magit lua-mode js2-mode helm-projectile helm-pass helm-ag gruvbox-theme dumb-jump dracula-theme doom-themes coffee-mode base16-theme ag)))
+    (undo-tree mu4e-query-fragments markdown-mode chruby inf-ruby auctex company-auctex haml-mode zenburn-theme yard-mode yaml-mode yafolding web-mode solarized-theme ruby-tools ruby-hash-syntax rspec-mode rainbow-delimiters psession powerline paradox org-tree-slide org-plus-contrib org-bullets nord-theme mu4e-maildirs-extension mu4e-jump-to-list monokai-theme moe-theme magit lua-mode js2-mode helm-projectile helm-pass helm-ag gruvbox-theme dumb-jump dracula-theme doom-themes coffee-mode base16-theme ag)))
  '(paradox-column-width-package 27)
  '(paradox-execute-asynchronously nil)
  '(paradox-github-token t)
@@ -269,3 +270,4 @@ SCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))
 
 (add-to-list 'mu4e-view-actions
   '("ViewInBrowser" . mu4e-action-view-in-browser) t)
+(put 'dired-find-alternate-file 'disabled nil)
