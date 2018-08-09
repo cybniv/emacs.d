@@ -58,6 +58,7 @@
  '(mml-secure-openpgp-encrypt-to-self t)
  '(mouse-wheel-progressive-speed nil)
  '(mouse-wheel-scroll-amount (quote (1 ((shift) . 1) ((control)))))
+ '(mu4e-alert-style (quote libnotify))
  '(mu4e-attachment-dir "***REMOVED******REMOVED***/Downloads")
  '(mu4e-auto-retrieve-keys t)
  '(mu4e-bookmarks
@@ -95,6 +96,7 @@
  '(mu4e-maildirs-extension-use-bookmarks t)
  '(mu4e-sent-folder "/mborg/Sent")
  '(mu4e-trash-folder "/mborg/Trash")
+ '(mu4e-update-interval 60)
  '(mu4e-user-mail-address-list
    (quote
     ("***REMOVED***" "***REMOVED***" "***REMOVED***")))
@@ -102,6 +104,7 @@
  '(mu4e-view-html-plaintext-ratio-heuristic 2305843009213693951)
  '(mu4e-view-show-addresses t)
  '(mu4e-view-show-images t)
+ '(mu4e-view-use-gnus t)
  '(org-agenda-files
    (quote
     ("***REMOVED******REMOVED***/.org/mukke.org" "***REMOVED******REMOVED***/.org/tech.org" "***REMOVED******REMOVED***/.org/todo.org" "***REMOVED******REMOVED***/.org/uni.org")))
@@ -153,7 +156,7 @@ SCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))
  '(org-tree-slide-fold-subtrees-skipped nil)
  '(package-selected-packages
    (quote
-    (undo-tree mu4e-query-fragments markdown-mode chruby inf-ruby auctex company-auctex haml-mode zenburn-theme yard-mode yaml-mode yafolding web-mode solarized-theme ruby-tools ruby-hash-syntax rspec-mode rainbow-delimiters psession powerline paradox org-tree-slide org-plus-contrib org-bullets nord-theme mu4e-maildirs-extension mu4e-jump-to-list monokai-theme moe-theme magit lua-mode js2-mode helm-projectile helm-pass helm-ag gruvbox-theme dumb-jump dracula-theme doom-themes coffee-mode base16-theme ag)))
+    (mu4e-alert undo-tree mu4e-query-fragments markdown-mode chruby inf-ruby auctex company-auctex haml-mode zenburn-theme yard-mode yaml-mode yafolding web-mode solarized-theme ruby-tools ruby-hash-syntax rspec-mode rainbow-delimiters psession powerline paradox org-tree-slide org-plus-contrib org-bullets nord-theme mu4e-maildirs-extension mu4e-jump-to-list monokai-theme moe-theme magit lua-mode js2-mode helm-projectile helm-pass helm-ag gruvbox-theme dumb-jump dracula-theme doom-themes coffee-mode base16-theme ag)))
  '(paradox-column-width-package 27)
  '(paradox-execute-asynchronously nil)
  '(paradox-github-token t)
