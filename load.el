@@ -2,7 +2,6 @@
 (require 'tramp)
 (require 'helm-config)
 (require 'mu4e-jump-to-list)
-;; (add-to-list 'load-path "~/.emacs.d/undo-tree/")
-;; (require 'undo-tree)
 (require 'chruby)
 (chruby "ruby-2.5")
+(mu4e-alert-enable-notifications)
