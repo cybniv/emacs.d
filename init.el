@@ -51,7 +51,7 @@
       (sign)
       (encrypt
        ("***REMOVED***" "***REMOVED***")
-       ("***REMOVED***" "***REMOVED***" "***REMOVED***")))
+       ))
      (CMS
       (sign)
       (encrypt)))))
