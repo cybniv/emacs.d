@@ -26,13 +26,13 @@
 (autoload 'ibuffer "ibuffer" "List buffers." t)
 
 ;; helm
-(global-set-key [f3] 'helm-find-files)
-(global-set-key (kbd "C-x b") 'helm-mini)
-(global-set-key (kbd "C-c h") 'helm-command-prefix)
-(global-set-key (kbd "M-y") 'helm-show-kill-ring)
-(global-set-key (kbd "M-x") 'helm-M-x)
-(global-set-key (kbd "C-c h o") 'helm-occur)
-(global-set-key (kbd "C-c h g") 'helm-google-suggest)
+(global-set-key [f3] 'find-file)
+;; (global-set-key (kbd "C-x b") 'helm-mini)
+;; (global-set-key (kbd "C-c h") 'helm-command-prefix)
+;; (global-set-key (kbd "M-y") 'helm-show-kill-ring)
+;; (global-set-key (kbd "M-x") 'helm-M-x)
+;; (global-set-key (kbd "C-c h o") 'helm-occur)
+;; (global-set-key (kbd "C-c h g") 'helm-google-suggest)
 ;; (global-set-key (kbd "C-x C-f") 'helm-find-files)
 
 ;; recentf
@@ -60,3 +60,6 @@
 ;; (define-key yafolding-mode-map (kbd "C-c <C-M-return>") 'yafolding-toggle-all)
 ;; (define-key yafolding-mode-map (kbd "C-c <C-S-return>") 'yafolding-hide-parent-element)
 (define-key yafolding-mode-map (kbd "<C-M-return>") 'yafolding-toggle-element)
+
+(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)

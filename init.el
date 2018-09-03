@@ -32,11 +32,6 @@
  '(gnutls-trustfiles
    (quote
     ("/etc/ssl/certs/ca-certificates.crt" "/etc/ssl/cert.pem")))
- '(helm-autoresize-max-height 0)
- '(helm-autoresize-min-height 20)
- '(helm-autoresize-mode t)
- '(helm-mode t)
- '(helm-projectile-fuzzy-match nil)
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(ispell-dictionary "deutsch")
@@ -50,8 +45,7 @@
     ((OpenPGP
       (sign)
       (encrypt
-       ("***REMOVED***" "***REMOVED***")
-       ))
+       ("***REMOVED***" "***REMOVED***")))
      (CMS
       (sign)
       (encrypt)))))
@@ -156,11 +150,11 @@ SCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))
  '(org-tree-slide-fold-subtrees-skipped nil)
  '(package-selected-packages
    (quote
-    (mu4e-alert undo-tree mu4e-query-fragments markdown-mode chruby inf-ruby auctex company-auctex haml-mode zenburn-theme yard-mode yaml-mode yafolding web-mode solarized-theme ruby-tools ruby-hash-syntax rspec-mode rainbow-delimiters psession powerline paradox org-tree-slide org-plus-contrib org-bullets nord-theme mu4e-maildirs-extension mu4e-jump-to-list monokai-theme moe-theme magit lua-mode js2-mode helm-projectile helm-pass helm-ag gruvbox-theme dumb-jump dracula-theme doom-themes coffee-mode base16-theme ag)))
+    (counsel mu4e-alert undo-tree mu4e-query-fragments markdown-mode chruby inf-ruby auctex company-auctex haml-mode zenburn-theme yard-mode yaml-mode yafolding web-mode solarized-theme ruby-tools ruby-hash-syntax rspec-mode rainbow-delimiters psession powerline paradox org-tree-slide org-plus-contrib org-bullets nord-theme mu4e-maildirs-extension mu4e-jump-to-list monokai-theme moe-theme magit lua-mode js2-mode gruvbox-theme dumb-jump dracula-theme doom-themes coffee-mode base16-theme ag)))
  '(paradox-column-width-package 27)
  '(paradox-execute-asynchronously nil)
  '(paradox-github-token t)
- '(projectile-completion-system (quote helm))
+ '(projectile-completion-system (quote ivy))
  '(projectile-enable-caching t)
  '(projectile-globally-ignored-directories
    (quote
