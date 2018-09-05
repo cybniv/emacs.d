@@ -8,4 +8,3 @@
 (projectile-mode +1)
 (powerline-reset)
 (dumb-jump-mode)
-(rainbow-delimiters-mode)

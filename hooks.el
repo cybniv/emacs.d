@@ -48,3 +48,4 @@
       '("◉" "◎" "⚫" "○" "►" "◇"))
 
 ;; (eval-after-load 'tramp '(setenv "SHELL" "/bin/bash"))
+(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
