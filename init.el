@@ -156,7 +156,7 @@ SCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))
  '(org-tree-slide-fold-subtrees-skipped nil)
  '(package-selected-packages
    (quote
-    (helm mu4e-alert undo-tree mu4e-query-fragments markdown-mode chruby inf-ruby auctex company-auctex haml-mode zenburn-theme yard-mode yaml-mode yafolding web-mode solarized-theme ruby-tools ruby-hash-syntax rspec-mode rainbow-delimiters psession powerline paradox org-tree-slide org-plus-contrib org-bullets nord-theme mu4e-maildirs-extension mu4e-jump-to-list monokai-theme moe-theme magit lua-mode js2-mode gruvbox-theme dumb-jump dracula-theme doom-themes coffee-mode base16-theme ag)))
+    (ibuffer-projectile helm mu4e-alert undo-tree mu4e-query-fragments markdown-mode chruby inf-ruby auctex company-auctex haml-mode zenburn-theme yard-mode yaml-mode yafolding web-mode solarized-theme ruby-tools ruby-hash-syntax rspec-mode rainbow-delimiters psession powerline paradox org-tree-slide org-plus-contrib org-bullets nord-theme mu4e-maildirs-extension mu4e-jump-to-list monokai-theme moe-theme magit lua-mode js2-mode gruvbox-theme dumb-jump dracula-theme doom-themes coffee-mode base16-theme ag)))
  '(paradox-column-width-package 27)
  '(paradox-execute-asynchronously nil)
  '(paradox-github-token t)
