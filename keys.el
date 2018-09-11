@@ -17,12 +17,22 @@
 (global-set-key [C-return] 'company-complete)
 (global-set-key (kbd "C-x g") 'magit-status)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
-(global-set-key (kbd "C-x r") 'recentf-open-files)
+(global-set-key (kbd "C-x C-r") 'recentf-open-files)
 (global-set-key (kbd "C-c a") 'org-agenda)
+(global-set-key (kbd "M-g") 'goto-line)
 ;;capture todo items using C-c c t
 (define-key global-map (kbd "C-c c") 'org-capture)
 
 (global-set-key (kbd "C-c t") 'toggle-transparency)
+
+;; helm
+(global-set-key (kbd "C-x b") 'helm-mini)
+(global-set-key (kbd "M-y") 'helm-show-kill-ring)
+(global-set-key (kbd "M-x") 'helm-M-x)
+
+; (global-set-key (kbd "C-c h") 'helm-command-prefix)
+; (global-set-key (kbd "C-c h o") 'helm-occur)
+; (global-set-key (kbd "C-c h g") 'helm-google-suggest)
 
 ;; yafolding
 (define-key yafolding-mode-map (kbd "<C-S-return>") nil)

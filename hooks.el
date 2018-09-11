@@ -47,5 +47,17 @@
 (setq org-bullets-bullet-list
       '("◉" "◎" "⚫" "○" "►" "◇"))
 
-;; (eval-after-load 'tramp '(setenv "SHELL" "/bin/bash"))
+;; Group buffers in ibuffer list by projectile project
+(add-hook 'ibuffer-hook
+    (lambda ()
+      (ibuffer-projectile-set-filter-groups)
+      (unless (eq ibuffer-sorting-mode 'alphabetic)
+        (ibuffer-do-sort-by-alphabetic))))
+
+;; save every 5 minutes in case of crash
+(run-at-time nil (* 5 60) 'recentf-save-list)
+
+; use bash for remote shells
+(eval-after-load 'tramp '(setenv "SHELL" "/bin/bash"))
+
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
