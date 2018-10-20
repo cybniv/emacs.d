@@ -11,6 +11,7 @@
  ;; If there is more than one, they won't work right.
  '(TeX-engine (quote xetex))
  '(TeX-view-program-list (quote (("mupdf" ("mupdf") "mupdf"))))
+ '(backup-directory-alist (quote (("." . "~/.saves"))))
  '(beacon-mode t)
  '(browse-url-browser-function (quote browse-url-default-browser))
  '(compilation-message-face (quote default))
@@ -24,6 +25,10 @@
     (name old-name general-category decomposition decimal-digit-value digit-value numeric-value mirrored iso-10646-comment)))
  '(dired-listing-switches "-alhv --group-directories-first")
  '(doc-view-scale-internally nil)
+ '(eshell-visual-commands
+   (quote
+    ("vi" "screen" "top" "less" "more" "lynx" "ncftp" "pine" "tin" "trn" "elm" "htop")))
+ '(explicit-shell-file-name "/usr/bin/zsh")
  '(font-use-system-font t)
  '(global-company-mode t)
  '(global-undo-tree-mode t)
@@ -184,6 +189,7 @@ SCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))
  '(solarized-distinct-doc-face t)
  '(solarized-distinct-fringe-background t)
  '(solarized-use-less-bold t)
+ '(term-buffer-maximum-size 4096)
  '(tool-bar-mode nil)
  '(tramp-default-method "ssh" nil (tramp))
  '(truncate-lines t)
@@ -211,13 +217,6 @@ SCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))
 (load "~/.emacs.d/keys.el")
 (load "~/.emacs.d/functions.el")
 (load "~/.emacs.d/hooks.el")
-
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:family "DejaVu Sans Mono" :foundry "PfEd" :slant normal :weight normal :height 98 :width normal)))))
 
 ;; use mupdf as default PDF viewer
 (with-eval-after-load "tex"
@@ -270,8 +269,39 @@ SCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))
                                                "\n"
                                                "Geschäftsführer: ***REMOVED***, ***REMOVED***, ***REMOVED***"
                                                ))))
+
+         ,(make-mu4e-context
+           :name "uni"
+           :enter-func (lambda () (mu4e-message "switching to studserv context"))
+           ;; no leave-func
+           ;; we match based on the maildir of the message
+           ;; this matches maildir /Arkham and its sub-directories
+           :match-func (lambda (msg)
+                         (when msg
+                           (string-match-p "^/studserv" (mu4e-message-field msg :maildir))))
+           :vars '( ( user-mail-address       . "***REMOVED***" )
+                    ( user-full-name          . "***REMOVED***" )
+                    ( mu4e-compose-signature  .
+                                              (concat
+                                              "Mit freundlichen Grüßen\n"
+                                              "***REMOVED***\n"))))
          ))
 
 (add-to-list 'mu4e-view-actions
   '("ViewInBrowser" . mu4e-action-view-in-browser) t)
 (put 'dired-find-alternate-file 'disabled nil)
+
+;; eshell
+(setq eshell-where-to-jump 'begin)
+(setq eshell-review-quick-commands nil)
+(setq eshell-smart-space-goes-to-end t)
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
+;; until this is in melpa
+(add-to-list 'load-path "~/.emacs.d/pacfiles-mode")
+(require 'pacfiles-mode)
