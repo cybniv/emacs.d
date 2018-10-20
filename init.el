@@ -36,6 +36,7 @@
  '(helm-autoresize-max-height 0)
  '(helm-autoresize-min-height 20)
  '(helm-autoresize-mode t)
+ '(helm-ff-file-name-history-use-recentf t)
  '(helm-mode t)
  '(helm-projectile-fuzzy-match nil)
  '(indent-tabs-mode nil)
