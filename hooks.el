@@ -61,3 +61,11 @@
 (eval-after-load 'tramp '(setenv "SHELL" "/bin/bash"))
 
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+(add-hook 'term-mode-hook #'eterm-256color-mode)
+
+;; --group-directories-first breaks dired over tramp
+;; https://www.reddit.com/r/emacs/comments/8dj1bt/groupdirectoriesfirst_breaks_dired_over_tramp/
+(add-hook 'dired-mode-hook 
+(lambda ()
+(when (file-remote-p dired-directory)                          
+(setq-local dired-actual-switches "-alhF"))))
