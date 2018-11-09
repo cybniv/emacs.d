@@ -11,22 +11,24 @@
 
 (global-set-key [f12] 'kill-this-buffer)
 
-(global-set-key [(meta &)] 'query-replace-regexp)
+(global-set-key (kbd "M-&") 'query-replace-regexp)
 (global-set-key (kbd "C-x w") 'what-line)
-(global-set-key [C-tab] 'other-window)
-(global-set-key [C-return] 'company-complete)
 (global-set-key (kbd "C-x g") 'magit-status)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
-(global-set-key (kbd "C-x C-r") 'recentf-open-files)
+(global-set-key (kbd "C-x C-r") 'helm-recentf)
 (global-set-key (kbd "C-c a") 'org-agenda)
 (global-set-key (kbd "M-g") 'goto-line)
 
-(global-set-key (kbd "C-M-SPC") 'ansi-term)
+(global-set-key (kbd "C-Q") 'kill-emacs-server)
+
+;; https://stackoverflow.com/questions/6464738/how-can-i-switch-focus-after-buffer-split-in-emacs
+; (global-set-key "\C-x2" (lambda () (interactive)(split-window-vertically) (other-window 1)))
+; (global-set-key "\C-x3" (lambda () (interactive)(split-window-horizontally) (other-window 1)))
 
 ;;capture todo items using C-c c t
 (define-key global-map (kbd "C-c c") 'org-capture)
 
-(global-set-key (kbd "C-c t") 'toggle-transparency)
+;; (global-set-key (kbd "C-c t") 'toggle-transparency)
 
 ;; helm
 ;; The default "C-x c" is quite close to "C-x C-c", which quits Emacs.
@@ -39,7 +41,9 @@
 (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action) ; make TAB work in terminal
 (define-key helm-map (kbd "C-z")  'helm-select-action) ; list actions using C-z
 
-(global-set-key (kbd "C-x b") 'helm-mini)
+(global-set-key (kbd "s-<left>") 'previous-buffer)
+(global-set-key (kbd "s-<right>") 'next-buffer)
+(global-set-key (kbd "s-x") 'helm-mini)
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
 (global-set-key (kbd "M-x") 'helm-M-x)
 
@@ -66,3 +70,5 @@
 (global-unset-key (kbd "C-z"))
 ;; damit jasch auch auf einer vernünftigen Tastatur einfügen kann:ein
 (global-set-key (kbd "C-z") 'yank)
+
+

@@ -39,6 +39,9 @@
 (when (fboundp 'imagemagick-register-types)
   (imagemagick-register-types))
 
+(add-hook 'dired-load-hook '(lambda () (require 'dired-x))) ; Load Dired X when Dired is loaded.
+(setq dired-omit-mode t) ; Turn on Omit mode.
+
 (add-hook 'dired-mode-hook 'turn-on-gnus-dired-mode)
 
 (powerline-default-theme)
@@ -69,3 +72,5 @@
 (lambda ()
 (when (file-remote-p dired-directory)                          
 (setq-local dired-actual-switches "-alhF"))))
+
+(setq fish-completion-fallback-on-bash-p 1)
