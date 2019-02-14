@@ -1,20 +1,24 @@
-(require 'powerline)
 (require 'tramp)
 (require 'eshell)
 (require 'em-smart)
 (require 'helm-config)
 (require 'mu4e-jump-to-list)
+(require 'org-mu4e)
 (require 'chruby)
 (chruby "ruby-2.5")
-(add-hook 'ruby-mode-hook 'robe-mode)
+;; fix bug
+;; (require 'subr-x)
+
+(require 'auth-source-pass)
+;; (auth-source-pass-enable)
 
 (mu4e-alert-enable-notifications)
 (projectile-mode +1)
-(powerline-reset)
-(dumb-jump-mode)
-(require 'emms-setup)
-(emms-all)
-(emms-default-players)
+
+(which-key-mode)
+(frames-only-mode)
+
+(pdf-loader-install)
 
 (setq eshell-prompt-regexp "^[^#$\n]*[#$] "
       eshell-prompt-function
@@ -25,5 +29,3 @@
 	     "~" (eshell/basename (eshell/pwd)))
 	 "]"
 	 (if (= (user-uid) 0) "# " "$ "))))
-
-(pdf-tools-install)
