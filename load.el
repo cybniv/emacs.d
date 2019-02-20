@@ -2,7 +2,6 @@
 (require 'eshell)
 (require 'em-smart)
 (require 'helm-config)
-(require 'mu4e-jump-to-list)
 (require 'org-mu4e)
 (require 'chruby)
 (chruby "ruby-2.5")
