@@ -4,12 +4,15 @@
 (global-unset-key (kbd "C-t"))
 (global-unset-key (kbd "C-x c"))
 (global-unset-key (kbd "C-z"))
+(global-unset-key (kbd "M-d"))
+(global-unset-key (kbd "C-<delete>"))
+(global-unset-key (kbd "M-k"))
 
 (global-set-key (kbd "C-z") 'yank)
 
 (global-set-key [f2] 'undo)
 (global-set-key [f3] 'helm-find-files)
-(global-set-key [f4] 'ag)
+(global-set-key [f4] 'deadgrep)
 
 (global-set-key [f7] 'save-buffer)
 (global-set-key [f8] 'save-buffer)
@@ -19,6 +22,11 @@
 
 (global-set-key [f12] 'kill-this-buffer)
 
+(global-unset-key (kbd "C-x C-="))
+(global-unset-key (kbd "C-x C--"))
+(global-set-key (kbd "C-=") 'text-scale-increase)
+(global-set-key (kbd "C--") 'text-scale-decrease)
+
 (global-set-key (kbd "M-&") 'query-replace-regexp)
 (global-set-key (kbd "C-x w") 'what-line)
 (global-set-key (kbd "C-x g") 'magit-status)
@@ -27,8 +35,9 @@
 (global-set-key (kbd "C-c a") 'org-agenda)
 (global-set-key (kbd "M-g") 'goto-line)
 
-;; helm
+(global-set-key (kbd "s-m") 'mu4e)
 
+;; helm
 ;; The default "C-x c" is quite close to "C-x C-c", which quits Emacs.
 ;; Changed to "C-c h". Note: We must set "C-c h" globally, because we
 ;; cannot change `helm-command-prefix-key' once `helm-config' is loaded.
