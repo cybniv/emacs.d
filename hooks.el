@@ -30,6 +30,8 @@
 
 (add-hook 'mu4e-view-hook (lambda () (setq truncate-lines t)))
 
+(add-hook 'after-init-hook #'global-emojify-mode)
+
 ;; (add-hook 'org-mode-hook 'org-bullets-mode)
 ;; (setq org-bullets-bullet-list
 ;;       '("◉" "◎" "⚫" "○" "►" "◇"))
@@ -45,7 +47,7 @@
 (run-at-time nil (* 5 60) 'recentf-save-list)
 
 ; use bash for remote shells
-(eval-after-load 'tramp '(setenv "SHELL" "/bin/bash"))
+; (eval-after-load 'tramp '(setenv "SHELL" "/bin/bash"))
 
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 ; (add-hook 'term-mode-hook #'eterm-256color-mode)

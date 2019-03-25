@@ -13,6 +13,7 @@
 
 (mu4e-alert-enable-notifications)
 (projectile-mode +1)
+(projectile-rails-global-mode)
 
 (which-key-mode)
 (frames-only-mode)
