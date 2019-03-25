@@ -84,6 +84,7 @@
      ("flag:unread AND NOT flag:trashed AND NOT flag:list" "not MailingLists unread" 110)
      ("list:fulldisclosure.seclists.org OR list:arch-security.archlinux.org OR list:dev.nmap.org OR list:bugtraq.list-id.securityfocus.com OR list:bugtraq@securityfocus.com" "SecLists" 115)))
  '(mu4e-change-filenames-when-moving t)
+ '(mu4e-compose-complete-only-personal t)
  '(mu4e-compose-signature "Cheers
 ***REMOVED***
 ")
@@ -111,15 +112,17 @@
  '(mu4e-maildirs-extension-use-bookmarks t)
  '(mu4e-sent-folder "/mborg/Sent")
  '(mu4e-trash-folder "/mborg/Trash")
- '(mu4e-update-interval nil)
+ '(mu4e-update-interval 180)
+ '(mu4e-use-fancy-chars nil)
  '(mu4e-user-mail-address-list
-   '("***REMOVED***" "***REMOVED***" "***REMOVED***"))
+   '("***REMOVED***" "***REMOVED***" "***REMOVED***" "***REMOVED***" "***REMOVED***"))
  '(mu4e-view-date-format "%a, %d.%b.%Y %H:%M:%S")
  '(mu4e-view-html-plaintext-ratio-heuristic most-positive-fixnum)
  '(mu4e-view-show-addresses t)
  '(mu4e-view-show-images t)
- '(mu4e-view-use-gnus t)
- '(org-agenda-files '("~/Org"))
+ '(mu4e-view-use-gnus nil)
+ '(org-agenda-files
+   '("~/Org/schulden.org" "***REMOVED******REMOVED***/Org/uni.org" "***REMOVED******REMOVED***/Org/tech.org" "***REMOVED******REMOVED***/Org/system_maintenance.org" "***REMOVED******REMOVED***/Org/***REMOVED***.org" "***REMOVED******REMOVED***/Org/ideas.org" "***REMOVED******REMOVED***/Org/infosec.org" "***REMOVED******REMOVED***/Org/ltx.org" "***REMOVED******REMOVED***/Org/wohnungen.org" "***REMOVED******REMOVED***/Org/workflow.org"))
  '(org-agenda-skip-deadline-prewarning-if-scheduled t)
  '(org-agenda-skip-scheduled-if-deadline-is-shown t)
  '(org-agenda-skip-scheduled-if-done t)
