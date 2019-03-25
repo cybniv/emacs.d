@@ -73,6 +73,7 @@
  '(mml-secure-openpgp-encrypt-to-self t)
  '(mouse-wheel-progressive-speed nil)
  '(mouse-wheel-scroll-amount '(1 ((shift) . 1) ((control))))
+ '(mu4e-alert-interesting-mail-query "flag:unread AND NOT flag:trashed AND NOT flag:list")
  '(mu4e-alert-style 'libnotify)
  '(mu4e-attachment-dir "***REMOVED******REMOVED***/Downloads")
  '(mu4e-auto-retrieve-keys t)
