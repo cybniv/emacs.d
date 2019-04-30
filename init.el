@@ -36,6 +36,7 @@
    '("vi" "screen" "top" "less" "more" "lynx" "ncftp" "pine" "tin" "trn" "elm" "htop"))
  '(exwm-layout-show-all-buffers t)
  '(exwm-workspace-show-all-buffers t)
+ '(fit-window-to-buffer-horizontally t)
  '(frames-only-mode-kill-frame-when-buffer-killed-buffer-list
    '("*RefTeX Select*" "*Help*" "*Popup Help*" "*Completions*" "widget-choose"))
  '(frames-only-mode-use-window-functions
@@ -84,7 +85,7 @@
      ("flag:unread AND NOT flag:trashed AND NOT flag:list" "not MailingLists unread" 110)
      ("list:fulldisclosure.seclists.org OR list:arch-security.archlinux.org OR list:dev.nmap.org OR list:bugtraq.list-id.securityfocus.com OR list:bugtraq@securityfocus.com" "SecLists" 115)))
  '(mu4e-change-filenames-when-moving t)
- '(mu4e-compose-complete-only-personal t)
+ '(mu4e-compose-complete-only-personal nil)
  '(mu4e-compose-signature "Cheers
 ***REMOVED***
 ")
@@ -166,7 +167,7 @@ SCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))
  '(org-startup-indented t)
  '(org-tree-slide-fold-subtrees-skipped nil)
  '(package-selected-packages
-   '(tern emojify use-package disk-usage pkgbuild-mode mu4e-maildirs-extension equake auth-source-pass pass password-store frames-only-mode projectile-rails which-key iedit snazzy-theme sane-term magit pacfiles-mode robe deadgrep pdf-tools pdfgrep ibuffer-projectile helm mu4e-alert undo-tree markdown-mode chruby inf-ruby auctex company-auctex haml-mode zenburn-theme yard-mode yaml-mode web-mode solarized-theme ruby-tools ruby-hash-syntax rspec-mode rainbow-delimiters psession paradox org-tree-slide org-plus-contrib nord-theme monokai-theme moe-theme lua-mode js2-mode gruvbox-theme doom-themes coffee-mode base16-theme ag))
+   '(gnu-elpa-keyring-update monokai-pro-theme blacken doom-modeline tern emojify use-package disk-usage pkgbuild-mode mu4e-maildirs-extension equake auth-source-pass pass password-store frames-only-mode projectile-rails which-key iedit snazzy-theme sane-term magit pacfiles-mode robe deadgrep pdf-tools pdfgrep ibuffer-projectile helm mu4e-alert undo-tree markdown-mode chruby inf-ruby auctex company-auctex haml-mode zenburn-theme yard-mode yaml-mode web-mode solarized-theme ruby-tools ruby-hash-syntax rspec-mode rainbow-delimiters psession paradox org-tree-slide org-plus-contrib nord-theme monokai-theme moe-theme lua-mode js2-mode gruvbox-theme doom-themes coffee-mode base16-theme ag))
  '(paradox-column-width-package 27)
  '(paradox-execute-asynchronously nil)
  '(paradox-github-token t)
@@ -266,22 +267,12 @@ SCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))
            :match-func (lambda (msg)
                          (when msg
                            (string-match-p "^/***REMOVED***" (mu4e-message-field msg :maildir))))
-           :vars '( ( user-mail-address       . "***REMOVED***" )
+           :vars '( ( user-mail-address       . "***REMOVED******REMOVED***" )
                     ( user-full-name          . "***REMOVED***" )
                     ( mu4e-compose-signature  .
                                               (concat
                                                "\n"
                                                "***REMOVED***\n"
-                                               "Entwicklung / Development\n"
-                                               "***REMOVED*** publishing services GmbH\n"
-                                               "***REMOVED***, ***REMOVED*** ***REMOVED***, Germany\n"
-***REMOVED***
-                                               "***REMOVED***, https://www.***REMOVED***.de\n"
-                                               "\n"
-***REMOVED***
-                                               "Registernummer / Registration Number: HRB 24930\n"
-                                               "\n"
-                                               "Geschäftsführer: ***REMOVED***, ***REMOVED***, ***REMOVED***"
                                                ))))
 
          ,(make-mu4e-context

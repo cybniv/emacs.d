@@ -3,6 +3,8 @@
 (add-to-list 'auto-mode-alist
              '("\\(?:Brewfile\\|Capfile\\|Gemfile\\(?:\\.[a-zA-Z0-9._-]+\\)?\\|[rR]akefile\\)\\'" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+
+(add-to-list 'auto-mode-alist '("\\rc\\'" . conf-mode))
 ;; Better imenu
 (add-hook 'js2-mode-hook #'js2-imenu-extras-mode)
 
@@ -28,7 +30,7 @@
 
 (mu4e-maildirs-extension)
 
-(add-hook 'mu4e-view-hook (lambda () (setq truncate-lines t)))
+;; (add-hook 'mu4e-view-hook (lambda () (setq truncate-lines t)))
 
 (add-hook 'after-init-hook #'global-emojify-mode)
 

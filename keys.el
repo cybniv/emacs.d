@@ -7,6 +7,7 @@
 (global-unset-key (kbd "M-d"))
 (global-unset-key (kbd "C-<delete>"))
 (global-unset-key (kbd "M-k"))
+;(global-unset-key (kbd "C-w"))
 
 (global-set-key (kbd "C-z") 'yank)
 
