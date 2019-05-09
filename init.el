@@ -24,7 +24,7 @@
  '(browse-url-browser-function 'browse-url-default-browser)
  '(compilation-message-face 'default)
  '(current-language-environment "UTF-8")
- '(custom-enabled-themes '(doom-molokai monokai))
+ '(custom-enabled-themes '(doom-Iosvkem))
  '(custom-safe-themes t)
  '(describe-char-unidata-list
    '(name old-name general-category decomposition decimal-digit-value digit-value numeric-value mirrored iso-10646-comment))
@@ -167,7 +167,7 @@ SCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))
  '(org-startup-indented t)
  '(org-tree-slide-fold-subtrees-skipped nil)
  '(package-selected-packages
-   '(gnu-elpa-keyring-update monokai-pro-theme blacken doom-modeline tern emojify use-package disk-usage pkgbuild-mode mu4e-maildirs-extension equake auth-source-pass pass password-store frames-only-mode projectile-rails which-key iedit snazzy-theme sane-term magit pacfiles-mode robe deadgrep pdf-tools pdfgrep ibuffer-projectile helm mu4e-alert undo-tree markdown-mode chruby inf-ruby auctex company-auctex haml-mode zenburn-theme yard-mode yaml-mode web-mode solarized-theme ruby-tools ruby-hash-syntax rspec-mode rainbow-delimiters psession paradox org-tree-slide org-plus-contrib nord-theme monokai-theme moe-theme lua-mode js2-mode gruvbox-theme doom-themes coffee-mode base16-theme ag))
+   '(elpy frames-only-mode editorconfig gnu-elpa-keyring-update monokai-pro-theme blacken doom-modeline tern emojify use-package disk-usage pkgbuild-mode mu4e-maildirs-extension auth-source-pass pass password-store projectile-rails which-key iedit snazzy-theme sane-term magit pacfiles-mode robe deadgrep pdf-tools pdfgrep ibuffer-projectile helm mu4e-alert undo-tree markdown-mode chruby inf-ruby auctex company-auctex haml-mode zenburn-theme yard-mode yaml-mode web-mode solarized-theme ruby-tools ruby-hash-syntax rspec-mode rainbow-delimiters paradox org-tree-slide org-plus-contrib nord-theme monokai-theme moe-theme lua-mode js2-mode gruvbox-theme doom-themes coffee-mode base16-theme ag))
  '(paradox-column-width-package 27)
  '(paradox-execute-asynchronously nil)
  '(paradox-github-token t)
@@ -220,6 +220,8 @@ SCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))
  '(user-full-name "***REMOVED***")
  '(user-mail-address "***REMOVED***")
  '(visible-bell t)
+ '(whitespace-style
+   '(face trailing tabs spaces lines lines-tail empty indentation::tab indentation::space indentation big-indent space-after-tab space-before-tab space-mark tab-mark newline-mark))
  '(word-wrap t))
 
 (put 'upcase-region 'disabled nil)

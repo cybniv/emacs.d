@@ -1,12 +1,8 @@
 (require 'tramp)
-(require 'eshell)
-(require 'em-smart)
 (require 'helm-config)
 (require 'org-mu4e)
 (require 'chruby)
 (chruby "ruby-2.5")
-;; fix bug
-;; (require 'subr-x)
 
 (require 'auth-source-pass)
 ;; (auth-source-pass-enable)
@@ -19,6 +15,8 @@
 (frames-only-mode)
 
 (pdf-loader-install)
+
+(editorconfig-mode 1)
 
 (setq eshell-prompt-regexp "^[^#$\n]*[#$] "
       eshell-prompt-function
