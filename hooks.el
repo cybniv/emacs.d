@@ -32,8 +32,6 @@
 
 ;; (add-hook 'mu4e-view-hook (lambda () (setq truncate-lines t)))
 
-(add-hook 'after-init-hook #'global-emojify-mode)
-
 ;; (add-hook 'org-mode-hook 'org-bullets-mode)
 ;; (setq org-bullets-bullet-list
 ;;       '("◉" "◎" "⚫" "○" "►" "◇"))
