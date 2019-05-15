@@ -38,6 +38,7 @@
 
 (global-set-key (kbd "s-m") 'mu4e)
 
+(global-set-key (kbd "C-c g g") 'browse-at-remote)
 ;; helm
 ;; The default "C-x c" is quite close to "C-x C-c", which quits Emacs.
 ;; Changed to "C-c h". Note: We must set "C-c h" globally, because we

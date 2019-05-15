@@ -58,3 +58,6 @@
 ;; (lambda ()
 ;; (when (file-remote-p dired-directory)                          
 ;; (setq-local dired-actual-switches "-alhF"))))
+
+(add-hook 'magit-mode-hook 'turn-on-magit-gitflow)
+(add-hook 'after-init-hook #'global-flycheck-mode)

@@ -4,6 +4,9 @@
 (require 'chruby)
 (chruby "ruby-2.5")
 
+(require 'magit-gitflow)
+
+
 (require 'auth-source-pass)
 ;; (auth-source-pass-enable)
 
@@ -17,6 +20,8 @@
 (pdf-loader-install)
 
 (editorconfig-mode 1)
+
+(elpy-enable)
 
 (setq eshell-prompt-regexp "^[^#$\n]*[#$] "
       eshell-prompt-function
