@@ -2,7 +2,9 @@
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
                          ("org" . "https://orgmode.org/elpa/")
                          ("melpa" . "https://melpa.org/packages/")))
-(package-initialize)
+
+(when (eval-when-compile (version< emacs-version "27"))
+  (package-initialize))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
