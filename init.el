@@ -39,6 +39,7 @@
  '(exwm-layout-show-all-buffers t)
  '(exwm-workspace-show-all-buffers t)
  '(fit-window-to-buffer-horizontally t)
+ '(flycheck-emacs-lisp-load-path 'inherit)
  '(frames-only-mode-kill-frame-when-buffer-killed-buffer-list
    '("*RefTeX Select*" "*Help*" "*Popup Help*" "*Completions*" "widget-choose"))
  '(frames-only-mode-use-window-functions
