@@ -238,6 +238,7 @@ SCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))
 ; (set-frame-parameter (selected-frame) 'alpha '(97 . 50))
 
 ;; load external configs
+(load "~/.emacs.d/init_packages.el")
 (load "~/.emacs.d/load.el")
 (load "~/.emacs.d/keys.el")
 (load "~/.emacs.d/functions.el")
