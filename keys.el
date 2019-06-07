@@ -61,8 +61,10 @@
 (global-set-key (kbd "s-<left>") 'previous-buffer)
 (global-set-key (kbd "s-<right>") 'next-buffer)
 
-(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
+(global-set-key (kbd "s-<enter>") #'terminal-here-project-launch)
+; (global-set-key (kbd "s-<enter>") #'terminal-here-launch)
 
-
+(provide 'keys)
+;;; keys.el ends here
