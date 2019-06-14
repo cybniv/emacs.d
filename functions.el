@@ -81,3 +81,19 @@
            (while (pcomplete-here*
                    (funcall pcomplete-command-completion-function)
                    (pcomplete-arg 'last) t))))))
+
+(defun insert-url-1 (url insert-func)  
+    (let* ((tem (funcall insert-func url)))
+          (push-mark (+ (point) (car (cdr tem))))))
+
+(defun insert-url (url)  
+    "Insert contents of URL into buffer after point.
+    Set mark after the inserted text.
+    
+    This function is meant for the user to run interactively.
+    Don't call it from programs! 
+    Use `url-insert-file-contents' instead.
+    \(Its calling sequence is different; see its documentation)."  
+    (declare (interactive-only url-insert-file-contents))  
+    (interactive "*sInsert URL: ")  
+    (insert-url-1 url #'url-insert-file-contents))
