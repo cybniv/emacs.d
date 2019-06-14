@@ -49,3 +49,5 @@
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
 ;; (add-hook 'python-mode-hook 'blacken-mode)
+
+(transparency 90)
