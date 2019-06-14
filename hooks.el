@@ -29,8 +29,6 @@
 
 (mu4e-maildirs-extension)
 
-;; (add-hook 'mu4e-view-hook (lambda () (setq truncate-lines t)))
-
 ;; Group buffers in ibuffer list by projectile project
 (add-hook 'ibuffer-hook
     (lambda ()
@@ -50,4 +48,4 @@
 (add-hook 'magit-mode-hook 'turn-on-magit-gitflow)
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
-(add-hook 'python-mode-hook 'blacken-mode)
+;; (add-hook 'python-mode-hook 'blacken-mode)
