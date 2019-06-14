@@ -29,7 +29,7 @@
  '(column-number-mode t)
  '(compilation-message-face (quote default))
  '(current-language-environment "UTF-8")
- '(custom-enabled-themes (quote (doom-Iosvkem)))
+ '(custom-enabled-themes (quote (ewal-spacemacs-modern)))
  '(custom-safe-themes t)
  '(delete-old-versions t)
  '(describe-char-unidata-list
