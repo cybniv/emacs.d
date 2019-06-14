@@ -11,6 +11,8 @@
 (require 'auth-source-pass)
 ;; (auth-source-pass-enable)
 
+(require 'ewal)
+
 (mu4e-alert-enable-notifications)
 (projectile-mode +1)
 
