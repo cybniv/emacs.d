@@ -38,6 +38,9 @@
  '(dired-listing-switches "-alhv")
  '(dired-ls-F-marks-symlinks t)
  '(dired-use-ls-dired t)
+ '(display-time-24hr-format t)
+ '(display-time-day-and-date t)
+ '(display-time-mode t)
  '(doc-view-scale-internally nil)
  '(doom-Iosvkem-brighter-modeline t)
  '(eshell-visual-commands
