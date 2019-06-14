@@ -21,7 +21,8 @@
      (output-dvi "xdvi")
      (output-pdf "Atril")
      (output-html "xdg-open"))))
- '(backup-directory-alist (quote (("." . "~/.cache/emacs/backups"))))
+ '(auto-save-list-file-prefix "/tmp/.emacs/auto-save-list/.saves-")
+ '(backup-directory-alist (quote (("." . "/tmp/emacs/backups"))))
  '(beacon-mode t)
  '(blacken-skip-string-normalization t)
  '(browse-url-browser-function (quote browse-url-default-browser))
@@ -30,6 +31,7 @@
  '(current-language-environment "UTF-8")
  '(custom-enabled-themes (quote (doom-Iosvkem)))
  '(custom-safe-themes t)
+ '(delete-old-versions t)
  '(describe-char-unidata-list
    (quote
     (name old-name general-category decomposition decimal-digit-value digit-value numeric-value mirrored iso-10646-comment)))
