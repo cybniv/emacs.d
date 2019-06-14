@@ -329,3 +329,7 @@ SCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :stipple nil :background "#1b1d1e" :foreground "#dddddd" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 113 :width normal :foundry "CTDB" :family "FuraCode Nerd Font Mono")))))
+
+(require 'man)
+(set-face-attribute 'Man-overstrike nil :inherit font-lock-type-face :bold t)
+(set-face-attribute 'Man-underline nil :inherit font-lock-keyword-face :underline t)
