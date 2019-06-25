@@ -1,7 +1,3 @@
-# emacs backup files
-*~
-*#
-
 elisp-objects
 elpa
 projectile.cache
@@ -15,6 +11,8 @@ history
 image-dired
 emms
 emojis
+request
+games
 
 # eshell
 eshell/history
