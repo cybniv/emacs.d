@@ -261,10 +261,12 @@ SCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))
 (put 'narrow-to-region 'disabled nil)
 
 ;; start maximized
-;; (add-to-list 'default-frame-alist '(fullscreen . maximized))
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
 ;; start transparent
-; (add-to-list 'default-frame-alist '(alpha . (97 . 50)))
-; (set-frame-parameter (selected-frame) 'alpha '(97 . 50))
+ ;;(set-frame-parameter (selected-frame) 'alpha '(<active> . <inactive>))
+ ;;(set-frame-parameter (selected-frame) 'alpha <both>)
+ (set-frame-parameter (selected-frame) 'alpha '(95 . 95))
+(add-to-list 'default-frame-alist '(alpha . (95 . 95)))
 
 ;; load external configs
 (load "~/.emacs.d/init_packages.el")
