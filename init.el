@@ -49,7 +49,6 @@
  '(exwm-layout-show-all-buffers t)
  '(exwm-workspace-show-all-buffers t)
  '(fit-window-to-buffer-horizontally t)
- '(flycheck-emacs-lisp-load-path (quote inherit))
  '(frames-only-mode-kill-frame-when-buffer-killed-buffer-list
    (quote
     ("*RefTeX Select*" "*Help*" "*Popup Help*" "*Completions*" "widget-choose")))
@@ -69,7 +68,6 @@
  '(helm-ff-file-name-history-use-recentf t)
  '(helm-mode t)
  '(helm-projectile-fuzzy-match nil)
- '(indent-tabs-mode nil)
  '(inf-ruby-default-implementation "pry")
  '(inhibit-startup-screen t)
  '(ispell-dictionary "deutsch")
