@@ -48,8 +48,8 @@
 (add-hook 'prog-mode-hook #'linum-mode)
 
 (add-hook 'magit-mode-hook 'turn-on-magit-gitflow)
-(add-hook 'after-init-hook #'global-flycheck-mode)
 
 ;; (add-hook 'python-mode-hook 'blacken-mode)
 
 (transparency 90)
+(global-visual-line-mode)
