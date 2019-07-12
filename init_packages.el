@@ -37,3 +37,10 @@
 ;; optionally if you want to use debugger
 ;; (use-package dap-mode)
 ;; (use-package dap-LANGUAGE) to load the dap adapter for your language
+
+;; use an org file to organise feeds
+(use-package elfeed-org
+  :ensure t
+  :config
+  (elfeed-org)
+  (setq rmh-elfeed-org-files (list "~/Org/elfeed.org")))
