@@ -28,6 +28,7 @@
   :hook (python-mode . lsp)
   :hook (ruby-mode . lsp)
   :commands lsp)
+(setq lsp-enable-snippet nil)
 
 ;; optionally
 ;; (use-package lsp-ui :commands lsp-ui-mode)
