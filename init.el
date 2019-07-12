@@ -66,6 +66,7 @@
  '(helm-autoresize-min-height 20)
  '(helm-autoresize-mode t)
  '(helm-ff-file-name-history-use-recentf t)
+ '(helm-ff-guess-ffap-urls nil)
  '(helm-mode t)
  '(helm-projectile-fuzzy-match nil)
  '(inf-ruby-default-implementation "pry")
