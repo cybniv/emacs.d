@@ -31,13 +31,6 @@
 
 (mu4e-maildirs-extension)
 
-;; Group buffers in ibuffer list by projectile project
-(add-hook 'ibuffer-hook
-    (lambda ()
-      (ibuffer-projectile-set-filter-groups)
-      (unless (eq ibuffer-sorting-mode 'alphabetic)
-        (ibuffer-do-sort-by-alphabetic))))
-
 ;; save every 5 minutes in case of crash
 (run-at-time nil (* 5 60) 'recentf-save-list)
 
@@ -46,8 +39,6 @@
 
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 (add-hook 'prog-mode-hook #'linum-mode)
-
-(add-hook 'magit-mode-hook 'turn-on-magit-gitflow)
 
 ;; (add-hook 'python-mode-hook 'blacken-mode)
 
