@@ -28,7 +28,7 @@
  '(column-number-mode t)
  '(compilation-message-face 'default)
  '(current-language-environment "UTF-8")
- '(custom-enabled-themes (quote (ewal-spacemacs-modern)))
+ '(custom-enabled-themes '(dracula))
  '(custom-safe-themes t)
  '(delete-old-versions t)
  '(describe-char-unidata-list
