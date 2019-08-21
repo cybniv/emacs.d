@@ -11,30 +11,28 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(TeX-engine (quote xetex))
+ '(TeX-engine 'xetex)
  '(TeX-view-program-selection
-   (quote
-    (((output-dvi has-no-display-manager)
+   '(((output-dvi has-no-display-manager)
       "dvi2tty")
      ((output-dvi style-pstricks)
       "dvips and gv")
      (output-dvi "xdvi")
      (output-pdf "Atril")
-     (output-html "xdg-open"))))
+     (output-html "xdg-open")))
  '(auto-save-list-file-prefix "/tmp/.emacs/auto-save-list/.saves-")
- '(backup-directory-alist (quote (("." . "/tmp/emacs/backups"))))
+ '(backup-directory-alist '(("." . "/tmp/emacs/backups")))
  '(beacon-mode t)
  '(blacken-skip-string-normalization t)
- '(browse-url-browser-function (quote browse-url-default-browser))
+ '(browse-url-browser-function 'browse-url-chromium)
  '(column-number-mode t)
- '(compilation-message-face (quote default))
+ '(compilation-message-face 'default)
  '(current-language-environment "UTF-8")
  '(custom-enabled-themes (quote (ewal-spacemacs-modern)))
  '(custom-safe-themes t)
  '(delete-old-versions t)
  '(describe-char-unidata-list
-   (quote
-    (name old-name general-category decomposition decimal-digit-value digit-value numeric-value mirrored iso-10646-comment)))
+   '(name old-name general-category decomposition decimal-digit-value digit-value numeric-value mirrored iso-10646-comment))
  '(dired-listing-switches "-alhv")
  '(dired-ls-F-marks-symlinks t)
  '(dired-use-ls-dired t)
@@ -44,24 +42,19 @@
  '(doc-view-scale-internally nil)
  '(doom-Iosvkem-brighter-modeline t)
  '(eshell-visual-commands
-   (quote
-    ("vi" "screen" "top" "less" "more" "lynx" "ncftp" "pine" "tin" "trn" "elm" "htop")))
+   '("vi" "screen" "top" "less" "more" "lynx" "ncftp" "pine" "tin" "trn" "elm" "htop"))
  '(exwm-layout-show-all-buffers t)
  '(exwm-workspace-show-all-buffers t)
  '(fit-window-to-buffer-horizontally t)
  '(frames-only-mode-kill-frame-when-buffer-killed-buffer-list
-   (quote
-    ("*RefTeX Select*" "*Help*" "*Popup Help*" "*Completions*" "widget-choose")))
+   '("*RefTeX Select*" "*Help*" "*Popup Help*" "*Completions*" "widget-choose"))
  '(frames-only-mode-use-window-functions
-   (quote
-    (calendar report-emacs-bug checkdoc-show-diagnostics checkdoc widget-choose)))
+   '(calendar report-emacs-bug checkdoc-show-diagnostics checkdoc widget-choose))
  '(global-company-mode t)
- '(gnus-dired-mail-mode (quote mu4e-user-agent))
+ '(gnus-dired-mail-mode 'mu4e-user-agent)
  '(gnutls-algorithm-priority "PFS")
  '(gnutls-min-prime-bits 2048)
- '(gnutls-trustfiles
-   (quote
-    ("/etc/ssl/certs/ca-certificates.crt" "/etc/ssl/cert.pem")))
+ '(gnutls-trustfiles '("/etc/ssl/certs/ca-certificates.crt" "/etc/ssl/cert.pem"))
  '(helm-autoresize-max-height 0)
  '(helm-autoresize-min-height 20)
  '(helm-autoresize-mode t)
@@ -75,56 +68,53 @@
  '(magit-diff-use-overlays nil)
  '(message-citation-line-format "On %d %b %Y at %R %z, %f wrote:
 ")
- '(message-citation-line-function (quote message-insert-formatted-citation-line))
- '(message-send-mail-function (quote smtpmail-send-it))
+ '(message-citation-line-function 'message-insert-formatted-citation-line)
+ '(message-send-mail-function 'smtpmail-send-it)
+ '(mml-enable-flowed nil)
  '(mml-secure-key-preferences
-   (quote
-    ((OpenPGP
+   '((OpenPGP
       (sign)
       (encrypt
        ("***REMOVED***" "***REMOVED***")
        ("***REMOVED***" "***REMOVED***")))
      (CMS
       (sign)
-      (encrypt)))))
+      (encrypt))))
  '(mml-secure-openpgp-encrypt-to-self t)
  '(mouse-wheel-progressive-speed nil)
- '(mouse-wheel-scroll-amount (quote (1 ((shift) . 1) ((control)))))
+ '(mouse-wheel-scroll-amount '(1 ((shift) . 1) ((control))))
  '(mu4e-alert-interesting-mail-query "flag:unread AND NOT flag:trashed AND NOT flag:list")
- '(mu4e-alert-style (quote libnotify))
+ '(mu4e-alert-style 'libnotify)
  '(mu4e-attachment-dir "***REMOVED******REMOVED***/Downloads")
  '(mu4e-auto-retrieve-keys t)
  '(mu4e-bookmarks
-   (quote
-    (("flag:unread AND NOT flag:trashed" "Unread messages" 117)
+   '(("flag:unread AND NOT flag:trashed" "Unread messages" 117)
      ("date:today..now" "Today's messages" 116)
      ("date:7d..now" "Last 7 days" 119)
      ("flag:unread AND NOT flag:trashed AND NOT flag:list" "not MailingLists unread" 110)
-     ("list:fulldisclosure.seclists.org OR list:arch-security.archlinux.org OR list:dev.nmap.org OR list:bugtraq.list-id.securityfocus.com OR list:bugtraq@securityfocus.com" "SecLists" 115))))
+     ("list:fulldisclosure.seclists.org OR list:arch-security.archlinux.org OR list:dev.nmap.org OR list:bugtraq.list-id.securityfocus.com OR list:bugtraq@securityfocus.com" "SecLists" 115)))
  '(mu4e-change-filenames-when-moving t)
  '(mu4e-compose-complete-only-personal nil)
  '(mu4e-compose-signature "Cheers
 ***REMOVED***
 ")
- '(mu4e-context-policy (quote pick-first))
+ '(mu4e-context-policy 'pick-first)
  '(mu4e-date-format-long "%a, %d.%b.%Y %H:%M:%S")
  '(mu4e-display-update-status-in-modeline nil)
  '(mu4e-drafts-folder "/mborg/Drafts")
  '(mu4e-get-mail-command "mbsync -a")
  '(mu4e-headers-date-format "%a, %d.%b.%y")
  '(mu4e-headers-fields
-   (quote
-    ((:human-date . 15)
+   '((:human-date . 15)
      (:flags . 6)
      (:size . 6)
      (:from . 23)
-     (:subject))))
+     (:subject)))
  '(mu4e-headers-include-related t)
  '(mu4e-headers-long-date-format "%a, %d.%b.%Y %H:%M:%S")
  '(mu4e-headers-results-limit 500)
  '(mu4e-headers-visible-flags
-   (quote
-    (flagged new passed replied seen attach encrypted signed unread)))
+   '(flagged new passed replied seen attach encrypted signed unread))
  '(mu4e-headers-visible-lines 20)
  '(mu4e-index-update-in-background t)
  '(mu4e-jump-to-list-min-freq 9)
@@ -135,34 +125,30 @@
  '(mu4e-update-interval 180)
  '(mu4e-use-fancy-chars nil)
  '(mu4e-user-mail-address-list
-   (quote
-    ("***REMOVED***" "***REMOVED***" "***REMOVED***" "***REMOVED***" "***REMOVED***")))
+   '("***REMOVED***" "***REMOVED***" "***REMOVED***" "***REMOVED***" "***REMOVED***"))
  '(mu4e-view-date-format "%a, %d.%b.%Y %H:%M:%S")
  '(mu4e-view-html-plaintext-ratio-heuristic most-positive-fixnum)
  '(mu4e-view-show-addresses t)
  '(mu4e-view-show-images t)
  '(mu4e-view-use-gnus nil)
  '(org-agenda-files
-   (quote
-    ("~/Org/schulden.org" "***REMOVED******REMOVED***/Org/uni.org" "***REMOVED******REMOVED***/Org/tech.org" "***REMOVED******REMOVED***/Org/system_maintenance.org" "***REMOVED******REMOVED***/Org/***REMOVED***.org" "***REMOVED******REMOVED***/Org/ideas.org" "***REMOVED******REMOVED***/Org/infosec.org" "***REMOVED******REMOVED***/Org/ltx.org" "***REMOVED******REMOVED***/Org/wohnungen.org" "***REMOVED******REMOVED***/Org/workflow.org")))
+   '("~/Org/schulden.org" "***REMOVED******REMOVED***/Org/uni.org" "***REMOVED******REMOVED***/Org/tech.org" "***REMOVED******REMOVED***/Org/system_maintenance.org" "***REMOVED******REMOVED***/Org/***REMOVED***.org" "***REMOVED******REMOVED***/Org/ideas.org" "***REMOVED******REMOVED***/Org/infosec.org" "***REMOVED******REMOVED***/Org/ltx.org" "***REMOVED******REMOVED***/Org/wohnungen.org" "***REMOVED******REMOVED***/Org/workflow.org"))
  '(org-agenda-skip-deadline-prewarning-if-scheduled t)
  '(org-agenda-skip-scheduled-if-deadline-is-shown t)
  '(org-agenda-skip-scheduled-if-done t)
  '(org-agenda-sorting-strategy
-   (quote
-    ((agenda deadline-up priority-down)
+   '((agenda deadline-up priority-down)
      (todo priority-down category-keep)
      (tags priority-down category-keep)
-     (search category-keep))))
+     (search category-keep)))
  '(org-agenda-span 27)
  '(org-agenda-time-leading-zero t)
- '(org-agenda-todo-ignore-deadlines (quote all))
- '(org-agenda-todo-ignore-scheduled (quote all))
- '(org-agenda-window-setup (quote other-frame) t)
- '(org-babel-load-languages (quote ((emacs-lisp . t) (ruby . t))))
+ '(org-agenda-todo-ignore-deadlines 'all)
+ '(org-agenda-todo-ignore-scheduled 'all)
+ '(org-agenda-window-setup 'other-frame t)
+ '(org-babel-load-languages '((emacs-lisp . t) (ruby . t)))
  '(org-capture-templates
-   (quote
-    (("t" "todo" entry
+   '(("t" "todo" entry
       (file+headline "~/.org/todo.org" "Tasks")
       "* TODO [#A] %?
 SCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))
@@ -179,21 +165,20 @@ SCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))
       "* TODO [#A] %?
 SCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))
 %a
-"))))
+")))
  '(org-clock-sound t)
  '(org-deadline-warning-days 7)
  '(org-hide-emphasis-markers t)
- '(org-html-checkbox-type (quote unicode))
- '(org-journal-date-format "%A, %d %B %Y")
- '(org-journal-dir "~/Org/journal/")
+ '(org-html-checkbox-type 'unicode)
+ '(org-journal-date-format "%A, %d %B %Y" t)
+ '(org-journal-dir "~/Org/journal/" t)
  '(org-log-done nil)
- '(org-log-repeat (quote time))
- '(org-modules (quote (org-docview org-gnus org-info org-irc org-notify)))
+ '(org-log-repeat 'time)
+ '(org-modules '(org-docview org-gnus org-info org-irc org-notify))
  '(org-startup-indented t)
  '(org-tree-slide-fold-subtrees-skipped nil)
  '(package-selected-packages
-   (quote
-    (elfeed elfeed-org helm-dash memento-mori helm-lsp lsp-mode atomic-chrome weechat terraform-mode ewal-evil-cursors ewal-spacemacs-themes ewal todoist rfc-mode terminal-here dockerfile-mode org-journal browse-at-remote magit-gitflow frames-only-mode editorconfig gnu-elpa-keyring-update monokai-pro-theme blacken doom-modeline tern use-package disk-usage pkgbuild-mode mu4e-maildirs-extension auth-source-pass pass password-store projectile-rails which-key iedit snazzy-theme sane-term magit pacfiles-mode robe deadgrep pdf-tools pdfgrep ibuffer-projectile helm mu4e-alert markdown-mode chruby inf-ruby auctex haml-mode zenburn-theme yard-mode yaml-mode web-mode solarized-theme ruby-tools ruby-hash-syntax rspec-mode rainbow-delimiters paradox org-tree-slide org-plus-contrib nord-theme monokai-theme moe-theme lua-mode js2-mode gruvbox-theme doom-themes base16-theme)))
+   '(dracula-theme projectile treemacs-projectile treemacs-magit treemacs helm-projectile org-projectile-helm org-projectile projectile-ripgrep tern magit-libgit elfeed elfeed-org helm-dash atomic-chrome weechat terraform-mode dockerfile-mode org-journal browse-at-remote magit-gitflow frames-only-mode editorconfig gnu-elpa-keyring-update monokai-pro-theme blacken use-package disk-usage pkgbuild-mode mu4e-maildirs-extension auth-source-pass pass password-store which-key iedit snazzy-theme sane-term magit pacfiles-mode robe deadgrep pdf-tools pdfgrep helm mu4e-alert markdown-mode chruby inf-ruby auctex haml-mode zenburn-theme yard-mode yaml-mode web-mode solarized-theme ruby-tools ruby-hash-syntax rspec-mode rainbow-delimiters paradox org-tree-slide org-plus-contrib nord-theme monokai-theme lua-mode js2-mode gruvbox-theme base16-theme))
  '(paradox-column-width-package 27)
  '(paradox-execute-asynchronously nil)
  '(paradox-github-token t)
@@ -201,14 +186,13 @@ SCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))
  '(pkgbuild-user-full-name "***REMOVED***")
  '(pkgbuild-user-mail-address "***REMOVED***")
  '(projectile-cache-file "***REMOVED******REMOVED***/.cache/emacs/projectile.cache")
- '(projectile-completion-system (quote helm))
+ '(projectile-completion-system 'helm)
  '(projectile-enable-caching t)
  '(projectile-globally-ignored-directories
-   (quote
-    (".idea" ".ensime_cache" ".eunit" ".git" ".hg" ".fslckout" "_FOSSIL_" ".bzr" "_darcs" ".tox" ".svn" ".stack-work" "fixtures" "vendor/bundle" "vendor/cache")))
- '(projectile-globally-ignored-file-suffixes (quote (".pyc")))
- '(projectile-project-search-path (quote ("~/ltx")))
- '(projectile-switch-project-action (quote projectile-dired))
+   '(".idea" ".ensime_cache" ".eunit" ".git" ".hg" ".fslckout" "_FOSSIL_" ".bzr" "_darcs" ".tox" ".svn" ".stack-work" "fixtures" "vendor/bundle" "vendor/cache"))
+ '(projectile-globally-ignored-file-suffixes '(".pyc"))
+ '(projectile-project-search-path '("~/ltx"))
+ '(projectile-switch-project-action 'projectile-dired)
  '(psession-autosave-mode t)
  '(psession-elisp-objects-default-directory "~/.cache/emacs/psession/")
  '(psession-mode t)
@@ -222,9 +206,8 @@ SCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))
  '(rst-indent-literal-normal 4)
  '(ruby-insert-encoding-magic-comment nil)
  '(safe-local-variable-values
-   (quote
-    ((TeX-command-extra-options . "-shell-escape")
-     (TeX-command-extra-options . -shell-escape))))
+   '((TeX-command-extra-options . "-shell-escape")
+     (TeX-command-extra-options . -shell-escape)))
  '(savehist-file "~/.cache/emacs/history")
  '(scroll-bar-mode nil)
  '(select-enable-primary t)
@@ -233,11 +216,11 @@ SCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))
  '(smtpmail-default-smtp-server "smtp.mailbox.org")
  '(smtpmail-smtp-server "smtp.mailbox.org")
  '(smtpmail-smtp-service 465)
- '(smtpmail-stream-type (quote ssl))
  '(solarized-distinct-doc-face t)
  '(solarized-distinct-fringe-background t)
  '(solarized-use-less-bold t)
- '(sort-fold-case t)
+ '(smtpmail-stream-type 'ssl)
+ '(sort-fold-case t t)
  '(term-buffer-maximum-size 4096)
  '(terminal-here-terminal-command (quote ("alacritty")))
  '(tool-bar-mode nil)
@@ -253,8 +236,7 @@ SCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))
  '(user-mail-address "***REMOVED***")
  '(visible-bell t)
  '(whitespace-style
-   (quote
-    (face trailing tabs spaces lines lines-tail empty indentation::tab indentation::space indentation big-indent space-after-tab space-before-tab space-mark tab-mark newline-mark)))
+   '(face trailing tabs spaces lines lines-tail empty indentation::tab indentation::space indentation big-indent space-after-tab space-before-tab space-mark tab-mark newline-mark))
  '(word-wrap t))
 
 (put 'upcase-region 'disabled nil)
