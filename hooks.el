@@ -43,4 +43,4 @@
 ;; (add-hook 'python-mode-hook 'blacken-mode)
 
 (transparency 90)
-(global-visual-line-mode)
+; (global-visual-line-mode)
