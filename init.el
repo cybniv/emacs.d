@@ -65,6 +65,8 @@
  '(inf-ruby-default-implementation "pry")
  '(inhibit-startup-screen t)
  '(ispell-dictionary "deutsch")
+ '(lsp-enable-snippet nil t)
+ '(lsp-pyls-configuration-sources ["flake8"])
  '(magit-diff-use-overlays nil)
  '(message-citation-line-format "On %d %b %Y at %R %z, %f wrote:
 ")
