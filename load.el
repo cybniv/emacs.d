@@ -11,7 +11,4 @@
 (frames-only-mode)
 
 (pdf-loader-install)
-
-(editorconfig-mode 1)
-
 (require 'terminal-here)

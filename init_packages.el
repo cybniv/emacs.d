@@ -44,3 +44,6 @@
   :config
   (elfeed-org)
   (setq rmh-elfeed-org-files (list "~/Org/elfeed.org")))
+(use-package editorconfig
+  :config
+  (editorconfig-mode 1))
