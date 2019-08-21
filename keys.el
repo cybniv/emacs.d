@@ -32,6 +32,9 @@
 (global-set-key (kbd "C-c a") 'org-agenda)
 (global-set-key (kbd "M-g") 'goto-line)
 (global-set-key (kbd "C-c g g") 'browse-at-remote)
+(global-set-key (kbd "M-<up>") 'move-line-up)
+(global-set-key (kbd "M-<down>") 'move-line-down)
+
 ;; helm
 ;; The default "C-x c" is quite close to "C-x C-c", which quits Emacs.
 ;; Changed to "C-c h". Note: We must set "C-c h" globally, because we

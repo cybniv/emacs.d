@@ -97,3 +97,14 @@
     (declare (interactive-only url-insert-file-contents))  
     (interactive "*sInsert URL: ")  
     (insert-url-1 url #'url-insert-file-contents))
+
+(defun move-line-up ()
+  (interactive)
+  (transpose-lines 1)
+  (forward-line -2))
+
+(defun move-line-down ()
+  (interactive)
+  (forward-line 1)
+  (transpose-lines 1)
+  (forward-line -1))
