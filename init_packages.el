@@ -6,10 +6,6 @@
   (org-journal-dir "~/Org/journal/")
   (org-journal-date-format "%A, %d %B %Y"))
 
-(use-package doom-modeline
-  :ensure t
-  :hook (after-init . doom-modeline-mode))
-
 (use-package markdown-mode
   :ensure t
   :mode (("README\\.md\\'" . gfm-mode)
@@ -24,26 +20,16 @@
   (setq atomic-chrome-buffer-open-style 'frame)
   )
 
-(use-package lsp-mode
-  :hook (python-mode . lsp)
-  :hook (ruby-mode . lsp)
-  :commands lsp)
-(setq lsp-enable-snippet nil)
-
-;; optionally
-;; (use-package lsp-ui :commands lsp-ui-mode)
-(use-package helm-lsp :commands helm-lsp-workspace-symbol)
-
-;; optionally if you want to use debugger
-;; (use-package dap-mode)
-;; (use-package dap-LANGUAGE) to load the dap adapter for your language
-
-;; use an org file to organise feeds
 (use-package elfeed-org
   :ensure t
   :config
   (elfeed-org)
   (setq rmh-elfeed-org-files (list "~/Org/elfeed.org")))
+
+(use-package which-key
+  :config
+  (which-key-mode +1))
+
 (use-package editorconfig
   :config
   (editorconfig-mode 1))
