@@ -20,8 +20,6 @@
      (output-dvi "xdvi")
      (output-pdf "Atril")
      (output-html "xdg-open")))
- '(auto-save-list-file-prefix "/tmp/.emacs/auto-save-list/.saves-")
- '(backup-directory-alist '(("." . "/tmp/emacs/backups")))
  '(beacon-mode t)
  '(blacken-skip-string-normalization t)
  '(browse-url-browser-function 'browse-url-chromium)
@@ -319,3 +317,12 @@ SCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))
 (require 'man)
 (set-face-attribute 'Man-overstrike nil :inherit font-lock-type-face :bold t)
 (set-face-attribute 'Man-underline nil :inherit font-lock-keyword-face :underline t)
+
+;; Save all tempfiles in $TMPDIR/emacs$UID/
+(defconst emacs-tmp-dir (expand-file-name (format "emacs%d" (user-uid)) temporary-file-directory))
+(setq backup-directory-alist
+      `((".*" . ,emacs-tmp-dir)))
+(setq auto-save-file-name-transforms
+      `((".*" ,emacs-tmp-dir t)))
+(setq auto-save-list-file-prefix
+      emacs-tmp-dir)
