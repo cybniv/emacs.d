@@ -46,10 +46,6 @@
  '(exwm-layout-show-all-buffers t)
  '(exwm-workspace-show-all-buffers t)
  '(fit-window-to-buffer-horizontally t)
- '(frames-only-mode-kill-frame-when-buffer-killed-buffer-list
-   '("*RefTeX Select*" "*Help*" "*Popup Help*" "*Completions*" "widget-choose"))
- '(frames-only-mode-use-window-functions
-   '(calendar report-emacs-bug checkdoc-show-diagnostics checkdoc widget-choose))
  '(global-company-mode t)
  '(gnus-dired-mail-mode 'mu4e-user-agent)
  '(gnutls-algorithm-priority "PFS")
@@ -181,7 +177,7 @@ SCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))
  '(org-startup-indented t)
  '(org-tree-slide-fold-subtrees-skipped nil)
  '(package-selected-packages
-   '(dracula-theme projectile treemacs-projectile treemacs-magit treemacs helm-projectile org-projectile-helm org-projectile projectile-ripgrep tern magit-libgit elfeed elfeed-org helm-dash atomic-chrome weechat terraform-mode dockerfile-mode org-journal browse-at-remote magit-gitflow frames-only-mode editorconfig gnu-elpa-keyring-update monokai-pro-theme blacken use-package disk-usage pkgbuild-mode mu4e-maildirs-extension auth-source-pass pass password-store which-key iedit snazzy-theme sane-term magit pacfiles-mode robe deadgrep pdf-tools pdfgrep helm mu4e-alert markdown-mode chruby inf-ruby auctex haml-mode zenburn-theme yard-mode yaml-mode web-mode solarized-theme ruby-tools ruby-hash-syntax rspec-mode rainbow-delimiters paradox org-tree-slide org-plus-contrib nord-theme monokai-theme lua-mode js2-mode gruvbox-theme base16-theme))
+   '(dracula-theme projectile treemacs-projectile treemacs-magit treemacs helm-projectile org-projectile-helm org-projectile projectile-ripgrep tern magit-libgit elfeed elfeed-org helm-dash atomic-chrome weechat terraform-mode dockerfile-mode org-journal browse-at-remote magit-gitflow editorconfig gnu-elpa-keyring-update monokai-pro-theme blacken use-package disk-usage pkgbuild-mode mu4e-maildirs-extension auth-source-pass pass password-store which-key iedit snazzy-theme sane-term magit pacfiles-mode robe deadgrep pdf-tools pdfgrep helm mu4e-alert markdown-mode chruby inf-ruby auctex haml-mode zenburn-theme yard-mode yaml-mode web-mode solarized-theme ruby-tools ruby-hash-syntax rspec-mode rainbow-delimiters paradox org-tree-slide org-plus-contrib nord-theme monokai-theme lua-mode js2-mode gruvbox-theme base16-theme))
  '(paradox-column-width-package 27)
  '(paradox-execute-asynchronously nil)
  '(paradox-github-token t)
