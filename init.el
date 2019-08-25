@@ -1,11 +1,3 @@
-(require 'package)
-(setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
-                         ("org" . "https://orgmode.org/elpa/")
-                         ("melpa" . "https://melpa.org/packages/")))
-
-(when (eval-when-compile (version< emacs-version "27"))
-  (package-initialize))
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -140,41 +132,14 @@
  '(org-agenda-todo-ignore-scheduled 'all)
  '(org-agenda-window-setup 'other-frame t)
  '(org-babel-load-languages '((emacs-lisp . t) (ruby . t)))
- '(org-capture-templates
-   '(("t" "todo" entry
-      (file+headline "~/.org/todo.org" "Tasks")
-      "* TODO [#A] %?
-SCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))
-%a
-     ")
-     ("x" "tech" entry
-      (file+headline "~/.org/tech.org" "Tasks")
-      "* TODO [#A] %?
-SCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))
-%a
-     ")
-     ("u" "uni" entry
-      (file+headline "~/.org/uni.org" "Tasks")
-      "* TODO [#A] %?
-SCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))
-%a
-")))
- '(org-clock-sound t)
  '(org-deadline-warning-days 7)
  '(org-hide-emphasis-markers t)
  '(org-html-checkbox-type 'unicode)
- '(org-journal-date-format "%A, %d %B %Y" t)
- '(org-journal-dir "~/Org/journal/" t)
  '(org-log-done nil)
  '(org-log-repeat 'time)
  '(org-modules '(org-docview org-gnus org-info org-irc org-notify))
  '(org-startup-indented t)
  '(org-tree-slide-fold-subtrees-skipped nil)
- '(package-selected-packages
-   '(dracula-theme projectile treemacs-projectile treemacs-magit treemacs helm-projectile org-projectile-helm org-projectile projectile-ripgrep tern magit-libgit elfeed elfeed-org helm-dash atomic-chrome weechat terraform-mode dockerfile-mode org-journal browse-at-remote magit-gitflow editorconfig gnu-elpa-keyring-update monokai-pro-theme blacken use-package disk-usage pkgbuild-mode mu4e-maildirs-extension auth-source-pass pass password-store which-key iedit snazzy-theme sane-term magit pacfiles-mode robe deadgrep pdf-tools pdfgrep helm mu4e-alert markdown-mode chruby inf-ruby auctex haml-mode zenburn-theme yard-mode yaml-mode web-mode solarized-theme ruby-tools ruby-hash-syntax rspec-mode rainbow-delimiters paradox org-tree-slide org-plus-contrib nord-theme monokai-theme lua-mode js2-mode gruvbox-theme base16-theme))
- '(paradox-column-width-package 27)
- '(paradox-execute-asynchronously nil)
- '(paradox-github-token t)
  '(pkgbuild-update-sums-on-save nil)
  '(pkgbuild-user-full-name "***REMOVED***")
  '(pkgbuild-user-mail-address "***REMOVED***")
@@ -184,7 +149,7 @@ SCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))
  '(projectile-globally-ignored-directories
    '(".idea" ".ensime_cache" ".eunit" ".git" ".hg" ".fslckout" "_FOSSIL_" ".bzr" "_darcs" ".tox" ".svn" ".stack-work" "fixtures" "vendor/bundle" "vendor/cache"))
  '(projectile-globally-ignored-file-suffixes '(".pyc"))
- '(projectile-project-search-path '("~/ltx"))
+ '(projectile-project-search-path '("~/pp"))
  '(projectile-switch-project-action 'projectile-dired)
  '(psession-autosave-mode t)
  '(psession-elisp-objects-default-directory "~/.cache/emacs/psession/")
@@ -210,6 +175,9 @@ SCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))
  '(smtpmail-smtp-service 465)
  '(smtpmail-stream-type 'ssl)
  '(sort-fold-case t t)
+ '(straight-recipes-emacsmirror-use-mirror t)
+ '(straight-repository-branch "develop")
+ '(straight-use-package-by-default t)
  '(term-buffer-maximum-size 4096)
  '(tool-bar-mode nil)
  '(tramp-auto-save-directory "~/.cache/emacs/tramp/")
@@ -239,13 +207,11 @@ SCHEDULED: %(org-insert-time-stamp (org-read-date nil t \"+0d\"))
  (set-frame-parameter (selected-frame) 'alpha '(95 . 95))
 (add-to-list 'default-frame-alist '(alpha . (95 . 95)))
 
-;; load external configs
+;; load
 (load "~/.emacs.d/init_packages.el")
-(load "~/.emacs.d/load.el")
-(load "~/.emacs.d/keys.el")
 (load "~/.emacs.d/functions.el")
+(load "~/.emacs.d/keys.el")
 (load "~/.emacs.d/hooks.el")
-
 
 (setq mu4e-contexts
       `( ,(make-mu4e-context

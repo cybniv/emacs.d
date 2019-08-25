@@ -22,25 +22,11 @@
 ;; Better imenu
 (add-hook 'js2-mode-hook #'js2-imenu-extras-mode)
 
-;; https://www.djcbsoftware.nl/code/mu/mu4e/Viewing-images-inline.html
-;; use imagemagick, if available
-(when (fboundp 'imagemagick-register-types)
-  (imagemagick-register-types))
-
-(add-hook 'dired-mode-hook 'turn-on-gnus-dired-mode)
-
-(mu4e-maildirs-extension)
-
 ;; save every 5 minutes in case of crash
 (run-at-time nil (* 5 60) 'recentf-save-list)
 
 ;; use bash for remote shells
 (eval-after-load 'tramp '(setenv "SHELL" "/bin/bash"))
 
-(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 (add-hook 'prog-mode-hook #'linum-mode)
-
 ;; (add-hook 'python-mode-hook 'blacken-mode)
-
-(transparency 90)
-; (global-visual-line-mode)
