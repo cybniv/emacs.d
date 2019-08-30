@@ -24,14 +24,20 @@
    ;; pdfgrep mu4e-alert chruby
    ;; inf-ruby haml-mode yard-mode yaml-mode
    ;; web-mode ruby-tools ruby-hash-syntax rspec-mode
-   ;; rainbow-delimiters paradox org-tree-slide
+   ;;  org-tree-slide
    ;; lua-mode js2-mode
+
+
+(use-package org
+  :straight org-plus-contrib)
 
 (use-package helm
   :init
   (progn
     (require 'helm-config)
     (helm-mode)))
+
+(use-package magit)
 
 (use-package atomic-chrome 
   :config
@@ -61,8 +67,6 @@
 		      :host github
 		      :repo "Alexander-Miller/i3wm-Config-Mode"))
 
-(use-package magit)
-
 (use-package markdown-mode
   :mode (("README\\.md\\'" . gfm-mode)
          ("\\.md\\'" . gfm-mode)
@@ -80,9 +84,6 @@
   :defer t
   :requires mu4e
   :init (with-eval-after-load 'mu4e (mu4e-maildirs-extension-load)))
-
-(use-package org
-  :straight org-plus-contrib)
 
 (use-package org-journal
   :after org
