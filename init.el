@@ -174,7 +174,7 @@
  '(smtpmail-smtp-server "smtp.mailbox.org")
  '(smtpmail-smtp-service 465)
  '(smtpmail-stream-type 'ssl)
- '(sort-fold-case t t)
+ '(sort-fold-case t)
  '(straight-recipes-emacsmirror-use-mirror t)
  '(straight-repository-branch "develop")
  '(straight-use-package-by-default t)
@@ -192,8 +192,6 @@
  '(user-mail-address "***REMOVED***")
  '(vc-follow-symlinks nil)
  '(visible-bell t)
- '(whitespace-style
-   '(face trailing tabs spaces lines lines-tail empty indentation::tab indentation::space indentation big-indent space-after-tab space-before-tab space-mark tab-mark newline-mark))
  '(word-wrap t))
 
 (put 'upcase-region 'disabled nil)
