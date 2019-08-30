@@ -190,6 +190,7 @@
  '(url-history-file "~/.cache/emacs/url_history")
  '(user-full-name "***REMOVED***")
  '(user-mail-address "***REMOVED***")
+ '(vc-follow-symlinks nil)
  '(visible-bell t)
  '(whitespace-style
    '(face trailing tabs spaces lines lines-tail empty indentation::tab indentation::space indentation big-indent space-after-tab space-before-tab space-mark tab-mark newline-mark))
