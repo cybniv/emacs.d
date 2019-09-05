@@ -35,7 +35,6 @@
  '(exwm-layout-show-all-buffers t)
  '(exwm-workspace-show-all-buffers t)
  '(fit-window-to-buffer-horizontally t)
- '(gnus-dired-mail-mode 'mu4e-user-agent)
  '(gnutls-algorithm-priority "PFS")
  '(gnutls-min-prime-bits 2048)
  '(gnutls-trustfiles '("/etc/ssl/certs/ca-certificates.crt" "/etc/ssl/cert.pem"))
@@ -164,61 +163,6 @@
 (load "~/.emacs.d/keys.el")
 (load "~/.emacs.d/hooks.el")
 
-(setq mu4e-contexts
-      `( ,(make-mu4e-context
-           :name "mborg"
-           :enter-func (lambda () (mu4e-message "switching to private context"))
-           ;; :leave-func (lambda () (mu4e-message "Leaving Private context"))
-           ;; we match based on the contact-fields of the message
-           :match-func (lambda (msg)
-                         (when msg
-                           (string-match-p "^/mborg" (mu4e-message-field msg :maildir))))
-           ;; :match-func (lambda (msg)
-           ;;               (when msg 
-           ;;                 (mu4e-message-contact-field-matches msg 
-           ;;                                                     :to "***REMOVED***")))
-           :vars '( ( user-mail-address      . "***REMOVED***"  )
-                    ( user-full-name         . "***REMOVED***" )
-                    ( mu4e-compose-signature .
-                                             (concat
-                                              "Sincerely\n"
-                                              "***REMOVED***\n"))))
-         ,(make-mu4e-context
-           :name "***REMOVED***"
-           :enter-func (lambda () (mu4e-message "switching to ***REMOVED*** context"))
-           ;; no leave-func
-           ;; we match based on the maildir of the message
-           ;; this matches maildir /Arkham and its sub-directories
-           :match-func (lambda (msg)
-                         (when msg
-                           (string-match-p "^/***REMOVED***" (mu4e-message-field msg :maildir))))
-           :vars '( ( user-mail-address       . "***REMOVED******REMOVED***" )
-                    ( user-full-name          . "***REMOVED***" )
-                    ( mu4e-compose-signature  .
-                                              (concat
-                                               "\n"
-                                               "***REMOVED***\n"
-                                               ))))
-
-         ,(make-mu4e-context
-           :name "uni"
-           :enter-func (lambda () (mu4e-message "switching to studserv context"))
-           ;; no leave-func
-           ;; we match based on the maildir of the message
-           ;; this matches maildir /Arkham and its sub-directories
-           :match-func (lambda (msg)
-                         (when msg
-                           (string-match-p "^/studserv" (mu4e-message-field msg :maildir))))
-           :vars '( ( user-mail-address       . "***REMOVED***" )
-                    ( user-full-name          . "***REMOVED***" )
-                    ( mu4e-compose-signature  .
-                                              (concat
-                                              "Mit freundlichen Grüßen\n"
-                                              "***REMOVED***\n"))))
-         ))
-
-(add-to-list 'mu4e-view-actions
-  '("ViewInBrowser" . mu4e-action-view-in-browser) t)
 (put 'dired-find-alternate-file 'disabled nil)
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
