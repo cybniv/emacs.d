@@ -46,7 +46,7 @@
 (use-package org-journal
   :after org
   :custom
-  (org-journal-dir "~/Org/journal/")
+  (org-journal-dir "~/Org/Journal/")
   (org-journal-date-format "%A, %d %B %Y"))
 
 ;; (use-package org-projectile
