@@ -13,7 +13,6 @@
      (output-pdf "Atril")
      (output-html "xdg-open")))
  '(blacken-skip-string-normalization t)
- '(browse-url-browser-function 'browse-url-chromium)
  '(column-number-mode t)
  '(compilation-message-face 'default)
  '(current-language-environment "UTF-8")
@@ -86,6 +85,8 @@
  '(org-deadline-warning-days 7)
  '(org-hide-emphasis-markers t)
  '(org-html-checkbox-type 'unicode)
+ '(org-journal-date-format "%A, %d %B %Y")
+ '(org-journal-dir "~/Org/Journal/")
  '(org-log-done nil)
  '(org-log-repeat 'time)
  '(org-modules '(org-docview org-gnus org-info org-irc org-notify))
@@ -172,6 +173,17 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 140 :width normal :family "FuraCode Nerd Font Mono")))))
+
+;; workaround for 
+;; Diff highlighting broken in emacs 27.0.50
+;; https://github.com/magit/magit/issues/3986
+(when (>= emacs-major-version 27)
+  (cl-loop for f in (face-list)
+           for face = (symbol-name f)
+           when (and (string-match "\\`helm" face)
+                     (ignore-errors
+                       (face-attribute f :extend t)))
+           do (set-face-attribute f nil :extend t)))
 
 (require 'man)
 (set-face-attribute 'Man-overstrike nil :inherit font-lock-type-face :bold t)
