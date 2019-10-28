@@ -143,6 +143,8 @@
  '(user-mail-address "***REMOVED***")
  '(vc-follow-symlinks nil)
  '(visible-bell t)
+ '(whitespace-style
+   '(trailing tabs lines newline empty indentation::tab indentation::space indentation big-indent space-after-tab space-before-tab space-mark tab-mark newline-mark))
  '(word-wrap t))
 
 (put 'upcase-region 'disabled nil)
