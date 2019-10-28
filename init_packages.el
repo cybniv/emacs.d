@@ -17,6 +17,7 @@
 ;; see https://jwiegley.github.io/use-package/keywords/ for documentation
 (use-package browse-at-remote)
 (use-package docker-compose-mode)
+(use-package pacfiles-mode)
 (use-package pkgbuild-mode)
 (use-package tern)
 (use-package terraform-mode)
@@ -25,14 +26,13 @@
   :hook ((ruby-mode . inf-ruby-minor-mode)
 	 (compilation-filter . inf-ruby-auto-enter)))
 
-;; (straight-use-package 'treemacs)
-;; '(projectile treemacs-projectile treemacs-magit
-;;  helm-projectile org-projectile-helm org-projectile
+(use-package projectile
+  :config
+  (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+  (projectile-mode +1))
 
-
-;; 
-;;  blacken disk-usage 
-;; auth-source-pass pass password-store
+;; previously installed packages:
+;; blacken disk-usage 
 ;; iedit pacfiles-mode robe
 ;; pdfgrep mu4e-alert chruby
 ;; haml-mode yard-mode
@@ -85,14 +85,6 @@
 (use-package editorconfig
   :config
   (editorconfig-mode 1))
-
-(use-package elfeed)
-
-(use-package elfeed-org
-  :after elfeed
-  :config
-  (elfeed-org)
-  (setq rmh-elfeed-org-files (list "~/Org/elfeed.org")))
 
 (use-package i3wm-config-mode
   :straight (i3wm-config-mode :type git
