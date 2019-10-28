@@ -16,6 +16,7 @@
 (global-set-key [f9] 'comment-region)
 (global-set-key [f10] 'uncomment-region)
 (global-set-key [f12] 'kill-this-buffer)
+(global-set-key (kbd "M-<return>") 'open-terminal-in-workdir)
 
 (global-unset-key (kbd "C-x C-="))
 (global-unset-key (kbd "C-x C--"))

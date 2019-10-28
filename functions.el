@@ -118,3 +118,11 @@
     (when filename
       (kill-new filename)
       (message "Copied buffer file name '%s' to the clipboard." filename))))
+
+(defun open-terminal-in-workdir ()
+  (interactive)
+  (let ((workdir (if (projectile-project-root)
+                     (projectile-project-root)
+                   default-directory)))
+    (call-process-shell-command
+     (concat "$TERMINAL --working-directory " workdir) nil 0)))
