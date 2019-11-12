@@ -101,7 +101,7 @@
  '(projectile-globally-ignored-directories
    '(".idea" ".ensime_cache" ".eunit" ".git" ".hg" ".fslckout" "_FOSSIL_" ".bzr" "_darcs" ".tox" ".svn" ".stack-work" "fixtures" "vendor/bundle" "vendor/cache"))
  '(projectile-globally-ignored-file-suffixes '(".pyc"))
- '(projectile-project-search-path '("~/pp"))
+ '(projectile-project-search-path '("~/***REMOVED***"))
  '(projectile-switch-project-action 'projectile-dired)
  '(psession-autosave-mode t)
  '(psession-elisp-objects-default-directory "~/.cache/emacs/psession/")
@@ -167,12 +167,6 @@
 (load "~/.emacs.d/hooks.el")
 
 (put 'dired-find-alternate-file 'disabled nil)
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 140 :width normal :family "FuraCode Nerd Font Mono")))))
 
 ;; workaround for 
 ;; Diff highlighting broken in emacs 27.0.50
@@ -197,3 +191,9 @@
       `((".*" ,emacs-tmp-dir t)))
 (setq auto-save-list-file-prefix
       emacs-tmp-dir)
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:family "SF Mono" :foundry "APPL" :slant normal :weight normal :height 111 :width normal)))))
