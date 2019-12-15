@@ -50,3 +50,5 @@
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
 
 ;; (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+
+(provide 'keys)

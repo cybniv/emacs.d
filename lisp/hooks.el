@@ -30,3 +30,5 @@
 
 (add-hook 'prog-mode-hook #'linum-mode)
 ;; (add-hook 'python-mode-hook 'blacken-mode)
+
+(provide 'hooks)

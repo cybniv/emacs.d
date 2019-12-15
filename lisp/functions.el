@@ -126,3 +126,4 @@
                    default-directory)))
     (call-process-shell-command
      (concat "$TERMINAL --working-directory " workdir) nil 0)))
+(provide 'functions)
