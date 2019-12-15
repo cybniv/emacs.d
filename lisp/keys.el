@@ -8,14 +8,15 @@
 ;(global-unset-key (kbd "C-w"))
 (global-unset-key (kbd "C-x C-e")) ; eval-last-sexp
 
+(global-set-key [f1] 'projectile-find-file)
 (global-set-key [f2] 'undo)
 (global-set-key [f3] 'helm-find-files)
-(global-set-key [f4] 'deadgrep)
-(global-set-key [f7] 'save-buffer)
+(global-set-key [f4] 'projectile-ripgrep)
 (global-set-key [f8] 'save-buffer)
 (global-set-key [f9] 'comment-region)
 (global-set-key [f10] 'uncomment-region)
 (global-set-key [f12] 'kill-this-buffer)
+
 (global-set-key (kbd "M-<return>") 'open-terminal-in-workdir)
 
 (global-unset-key (kbd "C-x C-="))
