@@ -98,7 +98,6 @@
  '(recentf-max-saved-items nil)
  '(recentf-mode t)
  '(recentf-save-file "~/.cache/emacs/recentf")
- '(ripgrep-executable "***REMOVED******REMOVED***/.cargo/bin/rg")
  '(rst-indent-field 4)
  '(rst-indent-literal-minimized 4)
  '(rst-indent-literal-normal 4)
