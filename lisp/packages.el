@@ -116,104 +116,97 @@
          ("\\.markdown\\'" . markdown-mode))
   :init (setq markdown-command "pandoc"))
 
-;; (use-package mu4e
-;;   :straight nil ;; comes via arch package
-;;   :config
-;;   (progn
-;;     (require 'org-mu4e) ;; mu4e org-store-link
-;;     (add-to-list 'mu4e-view-actions
-;; 		 '("ViewInBrowser" . mu4e-action-view-in-browser) t)
-;;     )
-;;   (setq mu4e-contexts
-;;    `( ,(make-mu4e-context
-;;         :name "mborg"
-;;         :enter-func (lambda () (mu4e-message "switching to private context"))
-;;         ;; :leave-func (lambda () (mu4e-message "Leaving Private context"))
-;;         ;; we match based on the contact-fields of the message
-;;         :match-func (lambda (msg)
-;;                       (when msg
-;;                         (string-match-p "^/mborg" (mu4e-message-field msg :maildir))))
-;;         ;; :match-func (lambda (msg)
-;;         ;;               (when msg 
-;;         ;;                 (mu4e-message-contact-field-matches msg 
-;;         ;;                                                     :to "***REMOVED***")))
-;;         :vars '( ( user-mail-address      . "***REMOVED***"  )
-;;                  ( user-full-name         . "***REMOVED***" )
-;;                  ( mu4e-compose-signature .
-;;                                           (concat
-;;                                            "Sincerely\n"
-;;                                            "***REMOVED***\n"))))
-;;       ,(make-mu4e-context
-;;         :name "***REMOVED***"
-;;         :enter-func (lambda () (mu4e-message "switching to ***REMOVED*** context"))
-;;         ;; no leave-func
-;;         ;; we match based on the maildir of the message
-;;         ;; this matches maildir /Arkham and its sub-directories
-;;         :match-func (lambda (msg)
-;;                       (when msg
-;;                         (string-match-p "^/***REMOVED***" (mu4e-message-field msg :maildir))))
-;;         :vars '( ( user-mail-address       . "***REMOVED******REMOVED***" )
-;;                  ( user-full-name          . "***REMOVED***" )
-;;                  ( mu4e-compose-signature  .
-;;                                            (concat
-;;                                             "\n"
-;;                                             "***REMOVED***\n"
-;;                                             ))))
-;;       ))
+(use-package mu4e
+  :straight nil ;; comes via arch package
+  :config
+  (progn
+    (require 'org-mu4e) ;; mu4e org-store-link
+    (add-to-list 'mu4e-view-actions
+		 '("ViewInBrowser" . mu4e-action-view-in-browser) t)
+    )
+  (setq mu4e-contexts
+   `( ,(make-mu4e-context
+        :name "mborg"
+        :enter-func (lambda () (mu4e-message "switching to private context"))
+        ;; :leave-func (lambda () (mu4e-message "Leaving Private context"))
+        ;; we match based on the contact-fields of the message
+        :match-func (lambda (msg)
+                      (when msg
+                        (string-match-p "^/mborg" (mu4e-message-field msg :maildir))))
+        ;; :match-func (lambda (msg)
+        ;;               (when msg 
+        ;;                 (mu4e-message-contact-field-matches msg 
+        ;;                                                     :to "***REMOVED***")))
+        :vars '( ( user-mail-address      . "***REMOVED***"  )
+                 ( user-full-name         . "***REMOVED***" )
+                 ( mu4e-compose-signature .
+                                          (concat
+                                           "Sincerely\n"
+                                           "***REMOVED***\n"))))
+      ,(make-mu4e-context
+        :name "***REMOVED***"
+        :enter-func (lambda () (mu4e-message "switching to ***REMOVED*** context"))
+        ;; no leave-func
+        ;; we match based on the maildir of the message
+        ;; this matches maildir /Arkham and its sub-directories
+        :match-func (lambda (msg)
+                      (when msg
+                        (string-match-p "^/***REMOVED***" (mu4e-message-field msg :maildir))))
+        :vars '( ( user-mail-address       . "***REMOVED******REMOVED***" )
+                 ( user-full-name          . "***REMOVED***" )
+                 ( mu4e-compose-signature  .
+                                           (concat
+                                            "\n"
+                                            "***REMOVED***\n"
+                                            ))))
+      ))
   
-;;   :custom
-;;   (gnus-dired-mail-mode 'mu4e-user-agent)
-;;   (mu4e-alert-interesting-mail-query "flag:unread AND NOT flag:trashed AND NOT flag:list")
-;;   (mu4e-alert-style 'libnotify)
-;;   (mu4e-attachment-dir "***REMOVED******REMOVED***/Downloads.tmp")
-;;   (mu4e-auto-retrieve-keys t)
-;;   (mu4e-bookmarks
-;;    '(("flag:unread AND NOT flag:trashed" "Unread messages" 117)
-;;      ("date:today..now" "Today's messages" 116)
-;;      ("date:7d..now" "Last 7 days" 119)
-;;      ("flag:unread AND NOT flag:trashed AND NOT flag:list" "not MailingLists unread" 110)
-;;      ("list:fulldisclosure.seclists.org OR list:arch-security.archlinux.org OR list:dev.nmap.org OR list:bugtraq.list-id.securityfocus.com OR list:bugtraq@securityfocus.com" "SecLists" 115)))
-;;   (mu4e-change-filenames-when-moving t)
-;;   (mu4e-compose-complete-only-personal nil)
-;;   (mu4e-compose-signature "Cheers\n***REMOVED***")
-;;   (mu4e-context-policy 'pick-first)
-;;   (mu4e-date-format-long "%a, %d.%b.%Y %H:%M:%S")
-;;   (mu4e-display-update-status-in-modeline nil)
-;;   (mu4e-get-mail-command "mbsync -a")
-;;   (mu4e-headers-date-format "%a, %d.%b.%y")
-;;   (mu4e-headers-fields
-;;    '((:human-date . 15)
-;;      (:flags . 6)
-;;      (:size . 6)
-;;      (:from . 23)
-;;      (:subject)))
-;;   (mu4e-headers-include-related t)
-;;   (mu4e-headers-long-date-format "%a, %d.%b.%Y %H:%M:%S")
-;;   (mu4e-headers-results-limit 500)
-;;   (mu4e-headers-visible-flags
-;;    '(flagged new passed replied seen attach encrypted signed unread))
-;;   (mu4e-headers-visible-lines 20)
-;;   (mu4e-index-update-in-background t)
-;;   (mu4e-jump-to-list-min-freq 9)
-;;   (mu4e-maildir "***REMOVED******REMOVED***/.mail")
-;;   (mu4e-maildirs-extension-use-bookmarks t)
-;;   (mu4e-sent-folder "/protonmail/Sent")
-;;   (mu4e-trash-folder "/protonmail/Trash")
-;;   (mu4e-update-interval 180)
-;;   (mu4e-use-fancy-chars nil)
-;;   (mu4e-user-mail-address-list
-;;    '("***REMOVED***" "***REMOVED***"))
-;;   (mu4e-view-date-format "%a, %d.%b.%Y %H:%M:%S")
-;;   (mu4e-view-html-plaintext-ratio-heuristic most-positive-fixnum)
-;;   (mu4e-view-show-addresses t)
-;;   (mu4e-view-show-images t)
-;;   (mu4e-view-use-gnus nil)
-;;   )
-
-;; (use-package mu4e-maildirs-extension
-;;   :defer t
-;;   :requires mu4e
-;;   :init (with-eval-after-load 'mu4e (mu4e-maildirs-extension-load)))
+  :custom
+  (gnus-dired-mail-mode 'mu4e-user-agent)
+  (mu4e-alert-interesting-mail-query "flag:unread AND NOT flag:trashed AND NOT flag:list")
+  (mu4e-alert-style 'libnotify)
+  (mu4e-attachment-dir "~/Downloads.tmp")
+  (mu4e-auto-retrieve-keys t)
+  ;; (mu4e-bookmarks
+  ;;  '(("flag:unread AND NOT flag:trashed" "Unread messages" 117)
+  ;;    ("date:today..now" "Today's messages" 116)
+  ;;    ("date:7d..now" "Last 7 days" 119)
+  ;;    ("flag:unread AND NOT flag:trashed AND NOT flag:list" "not MailingLists unread" 110)
+  ;;    ("list:fulldisclosure.seclists.org OR list:arch-security.archlinux.org OR list:dev.nmap.org OR list:bugtraq.list-id.securityfocus.com OR list:bugtraq@securityfocus.com" "SecLists" 115)))
+  (mu4e-change-filenames-when-moving t)
+  (mu4e-compose-complete-only-personal nil)
+  (mu4e-compose-signature "Cheers\n***REMOVED***")
+  (mu4e-context-policy 'pick-first)
+  (mu4e-date-format-long "%a, %d.%b.%Y %H:%M:%S")
+  (mu4e-display-update-status-in-modeline nil)
+  (mu4e-get-mail-command "mbsync -a")
+  (mu4e-headers-date-format "%a, %d.%b.%y")
+  (mu4e-headers-fields
+   '((:human-date . 15)
+     (:flags . 6)
+     (:size . 6)
+     (:from . 23)
+     (:subject)))
+  (mu4e-headers-include-related t)
+  (mu4e-headers-long-date-format "%a, %d.%b.%Y %H:%M:%S")
+  (mu4e-headers-results-limit 500)
+  (mu4e-headers-visible-flags
+   '(flagged new passed replied seen attach encrypted signed unread))
+  (mu4e-headers-visible-lines 20)
+  (mu4e-index-update-in-background t)
+  (mu4e-jump-to-list-min-freq 9)
+  (mu4e-sent-folder "/protonmail/Sent")
+  (mu4e-trash-folder "/protonmail/Trash")
+  (mu4e-update-interval 180)
+  (mu4e-use-fancy-chars nil)
+  (mu4e-user-mail-address-list
+   '("***REMOVED***" "***REMOVED***"))
+  (mu4e-view-date-format "%a, %d.%b.%Y %H:%M:%S")
+  (mu4e-view-html-plaintext-ratio-heuristic most-positive-fixnum)
+  (mu4e-view-show-addresses t)
+  (mu4e-view-show-images t)
+  (mu4e-view-use-gnus nil)
+  )
 
 ;; (use-package pdf-tools
 ;;   :magic ("%PDF" . pdf-view-mode)
