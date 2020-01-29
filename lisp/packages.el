@@ -15,16 +15,19 @@
 (straight-use-package 'use-package)
 
 ;; docs: https://jwiegley.github.io/use-package/keywords/
+(use-package undo-tree)
 ;; (use-package browse-at-remote)
 ;; (use-package deadgrep)
 ;; (use-package docker-compose-mode)
 (use-package magit)
-;(use-package pacfiles-mode)
-;; (use-package pkgbuild-mode)
-(use-package ripgrep)
-;; (use-package tern)
+(use-package pacfiles-mode)
+(use-package pkgbuild-mode)
 (use-package terraform-mode)
 (use-package yaml-mode)
+
+(use-package ripgrep)
+(use-package dumb-jump)
+;; (use-package tern)
 
 (use-package rainbow-delimiters
   :init
