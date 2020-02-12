@@ -29,6 +29,10 @@
 (use-package dumb-jump)
 ;; (use-package tern)
 
+(use-package python-black
+  :demand t
+  :after python)
+
 (use-package rainbow-delimiters
   :init
   (add-hook 'prog-mode-hook #'rainbow-delimiters-mode))
