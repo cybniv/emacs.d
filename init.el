@@ -12,26 +12,24 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(TeX-engine (quote xetex))
+ '(TeX-engine 'xetex)
  '(TeX-view-program-selection
-   (quote
-    (((output-dvi has-no-display-manager)
+   '(((output-dvi has-no-display-manager)
       "dvi2tty")
      ((output-dvi style-pstricks)
       "dvips and gv")
      (output-dvi "xdvi")
      (output-pdf "Atril")
-     (output-html "xdg-open"))))
+     (output-html "xdg-open")))
  '(blacken-skip-string-normalization t)
  '(column-number-mode t)
- '(compilation-message-face (quote default))
+ '(compilation-message-face 'default)
  '(current-language-environment "UTF-8")
- '(custom-enabled-themes (quote (dracula)))
+ '(custom-enabled-themes '(dracula))
  '(custom-safe-themes t)
  '(delete-old-versions t)
  '(describe-char-unidata-list
-   (quote
-    (name old-name general-category decomposition decimal-digit-value digit-value numeric-value mirrored iso-10646-comment)))
+   '(name old-name general-category decomposition decimal-digit-value digit-value numeric-value mirrored iso-10646-comment))
  '(dired-listing-switches "-laGh1v --group-directories-first")
  '(dired-ls-F-marks-symlinks t)
  '(dired-use-ls-dired t)
@@ -40,8 +38,7 @@
  '(display-time-mode t)
  '(doc-view-scale-internally nil)
  '(eshell-visual-commands
-   (quote
-    ("vi" "screen" "top" "less" "more" "lynx" "ncftp" "pine" "tin" "trn" "elm" "htop")))
+   '("vi" "screen" "top" "less" "more" "lynx" "ncftp" "pine" "tin" "trn" "elm" "htop"))
  '(fit-window-to-buffer-horizontally t)
  '(gnutls-algorithm-priority "PFS")
  '(gnutls-min-prime-bits 2048)
@@ -55,12 +52,11 @@
  '(menu-bar-mode nil)
  '(message-citation-line-format "On %d %b %Y at %R %z, %f wrote:
 ")
- '(message-citation-line-function (quote message-insert-formatted-citation-line))
- '(message-send-mail-function (quote smtpmail-send-it))
+ '(message-citation-line-function 'message-insert-formatted-citation-line)
+ '(message-send-mail-function 'smtpmail-send-it)
  '(mml-enable-flowed nil)
  '(mml-secure-key-preferences
-   (quote
-    ((OpenPGP
+   '((OpenPGP
       (sign)
       (encrypt
        ("***REMOVED***" "***REMOVED***")
@@ -68,32 +64,31 @@
        ("***REMOVED***" "***REMOVED***")))
      (CMS
       (sign)
-      (encrypt)))))
+      (encrypt))))
  '(mml-secure-openpgp-encrypt-to-self t)
  '(mouse-wheel-progressive-speed nil)
- '(mouse-wheel-scroll-amount (quote (1 ((shift) . 1) ((control)))))
- '(org-babel-load-languages (quote ((emacs-lisp . t) (ruby . t))))
+ '(mouse-wheel-scroll-amount '(1 ((shift) . 1) ((control))))
+ '(org-babel-load-languages '((emacs-lisp . t) (ruby . t)))
  '(org-deadline-warning-days 7)
  '(org-hide-emphasis-markers t)
- '(org-html-checkbox-type (quote unicode))
+ '(org-html-checkbox-type 'unicode)
  '(org-journal-date-format "%A, %d %B %Y")
  '(org-journal-dir "~/Org/Journal/")
  '(org-log-done nil)
- '(org-log-repeat (quote time))
- '(org-modules (quote (org-docview org-gnus org-info org-irc org-notify)))
+ '(org-log-repeat 'time)
+ '(org-modules '(org-docview org-gnus org-info org-irc org-notify))
  '(org-startup-indented t)
  '(org-tree-slide-fold-subtrees-skipped nil)
  '(pkgbuild-update-sums-on-save nil)
  '(pkgbuild-user-full-name "***REMOVED***")
  '(pkgbuild-user-mail-address "***REMOVED***")
- '(projectile-completion-system (quote helm))
+ '(projectile-completion-system 'helm)
  '(projectile-enable-caching t)
  '(projectile-globally-ignored-directories
-   (quote
-    (".idea" ".ensime_cache" ".eunit" ".git" ".hg" ".fslckout" "_FOSSIL_" ".bzr" "_darcs" ".tox" ".svn" ".stack-work" "fixtures" "vendor/bundle" "vendor/cache" "locale")))
- '(projectile-globally-ignored-file-suffixes (quote (".pyc")))
- '(projectile-project-search-path (quote ("~/***REMOVED***")))
- '(projectile-switch-project-action (quote projectile-dired))
+   '(".idea" ".ensime_cache" ".eunit" ".git" ".hg" ".fslckout" "_FOSSIL_" ".bzr" "_darcs" ".tox" ".svn" ".stack-work" "fixtures" "vendor/bundle" "vendor/cache" "locale"))
+ '(projectile-globally-ignored-file-suffixes '(".pyc"))
+ '(projectile-project-search-path '("~/***REMOVED***"))
+ '(projectile-switch-project-action 'projectile-dired)
  '(recentf-max-menu-items 27)
  '(recentf-max-saved-items nil)
  '(recentf-mode t)
@@ -103,9 +98,8 @@
  '(rst-indent-literal-normal 4)
  '(ruby-insert-encoding-magic-comment nil)
  '(safe-local-variable-values
-   (quote
-    ((TeX-command-extra-options . "-shell-escape")
-     (TeX-command-extra-options . -shell-escape))))
+   '((TeX-command-extra-options . "-shell-escape")
+     (TeX-command-extra-options . -shell-escape)))
  '(savehist-file "~/.cache/emacs/history")
  '(scroll-bar-mode nil)
  '(show-paren-mode t)
@@ -113,7 +107,7 @@
  '(smtpmail-default-smtp-server "smtp.mailbox.org")
  '(smtpmail-smtp-server "smtp.mailbox.org")
  '(smtpmail-smtp-service 465)
- '(smtpmail-stream-type (quote ssl))
+ '(smtpmail-stream-type 'ssl)
  '(sort-fold-case t t)
  '(straight-recipes-emacsmirror-use-mirror t)
  '(straight-repository-branch "develop")
@@ -134,8 +128,7 @@
  '(vc-follow-symlinks nil)
  '(visible-bell t)
  '(whitespace-style
-   (quote
-    (trailing tabs lines newline empty indentation::tab indentation::space indentation big-indent space-after-tab space-before-tab space-mark tab-mark newline-mark)))
+   '(trailing tabs lines newline empty indentation::tab indentation::space indentation big-indent space-after-tab space-before-tab space-mark tab-mark newline-mark))
  '(word-wrap t))
 
 (custom-set-faces
