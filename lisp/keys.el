@@ -11,7 +11,7 @@
 (global-set-key [f1] 'projectile-find-file)
 (global-set-key [f2] 'undo)
 (global-set-key [f3] 'helm-find-files)
-(global-set-key [f4] 'projectile-ripgrep)
+(global-set-key [f4] 'deadgrep)
 (global-set-key [f8] 'save-buffer)
 (global-set-key [f9] 'comment-region)
 (global-set-key [f10] 'uncomment-region)

@@ -25,7 +25,7 @@
 (use-package terraform-mode)
 (use-package yaml-mode)
 
-(use-package ripgrep)
+(use-package deadgrep)
 (use-package dumb-jump)
 ;; (use-package tern)
 
