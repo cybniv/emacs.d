@@ -1,12 +1,3 @@
-;; Save all tempfiles in $TMPDIR/emacs$UID/
-(defconst emacs-tmp-dir (expand-file-name (format "emacs%d" (user-uid)) temporary-file-directory))
-(setq backup-directory-alist
-      `((".*" . ,emacs-tmp-dir)))
-(setq auto-save-file-name-transforms
-      `((".*" ,emacs-tmp-dir t)))
-(setq auto-save-list-file-prefix
-      emacs-tmp-dir)
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -47,6 +38,7 @@
  '(helm-mode t)
  '(inf-ruby-default-implementation "pry")
  '(inhibit-startup-screen t)
+ '(initial-frame-alist '((vertical-scroll-bars) (fullscreen . maximized)))
  '(ispell-dictionary "deutsch")
  '(magit-diff-use-overlays nil)
  '(menu-bar-mode nil)
@@ -76,7 +68,6 @@
  '(org-journal-dir "~/Org/Journal/")
  '(org-log-done nil)
  '(org-log-repeat 'time)
- '(org-modules '(org-docview org-gnus org-info org-irc org-notify))
  '(org-startup-indented t)
  '(org-tree-slide-fold-subtrees-skipped nil)
  '(pkgbuild-update-sums-on-save nil)
@@ -92,7 +83,6 @@
  '(recentf-max-menu-items 27)
  '(recentf-max-saved-items nil)
  '(recentf-mode t)
- '(recentf-save-file "~/.cache/emacs/recentf")
  '(rst-indent-field 4)
  '(rst-indent-literal-minimized 4)
  '(rst-indent-literal-normal 4)
@@ -112,17 +102,11 @@
  '(straight-recipes-emacsmirror-use-mirror t)
  '(straight-repository-branch "develop")
  '(straight-use-package-by-default t)
- '(temporary-file-directory "/run/user/1000")
  '(term-buffer-maximum-size 4096)
  '(tool-bar-mode nil)
- '(tramp-auto-save-directory "~/.cache/emacs/tramp/")
  '(tramp-default-method "ssh")
- '(tramp-persistency-file-name "~/.cache/emacs/tramp_connection_history")
- '(transient-history-file "~/.cache/emacs/transient/history.el")
  '(truncate-lines t)
  '(uniquify-strip-common-suffix nil)
- '(url-configuration-directory "~/.cache/emacs/url")
- '(url-history-file "~/.cache/emacs/url_history")
  '(user-full-name "***REMOVED***")
  '(user-mail-address "***REMOVED***")
  '(vc-follow-symlinks nil)
@@ -144,6 +128,8 @@
 (put 'dired-find-alternate-file 'disabled nil)
 
 ;; load
+(add-to-list 'load-path "~/.emacs.d/lisp/")
+
 (require 'packages)
 (require 'functions)
 (require 'keys)
