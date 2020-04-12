@@ -12,6 +12,7 @@
      (output-dvi "xdvi")
      (output-pdf "Atril")
      (output-html "xdg-open")))
+ '(auto-save-default nil)
  '(blacken-skip-string-normalization t)
  '(column-number-mode t)
  '(compilation-message-face 'default)
@@ -41,6 +42,7 @@
  '(initial-frame-alist '((vertical-scroll-bars) (fullscreen . maximized)))
  '(ispell-dictionary "deutsch")
  '(magit-diff-use-overlays nil)
+ '(make-backup-files nil)
  '(menu-bar-mode nil)
  '(message-citation-line-format "On %d %b %Y at %R %z, %f wrote:
 ")
