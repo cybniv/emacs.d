@@ -41,6 +41,7 @@
  '(inhibit-startup-screen t)
  '(initial-frame-alist '((vertical-scroll-bars) (fullscreen . maximized)))
  '(ispell-dictionary "deutsch")
+ '(large-file-warning-threshold 100000000)
  '(magit-diff-use-overlays nil)
  '(make-backup-files nil)
  '(menu-bar-mode nil)
