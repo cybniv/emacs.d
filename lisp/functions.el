@@ -28,16 +28,16 @@
 ;;      (shr-insert-document dom)
 ;;      (goto-char (point-min))))
 
-;; (defun mu4e-shr2text () 
-;;   "Html to text using the shr engine; this can be used in 
-;; `mu4e-html2text-command' in a new enough emacs. Based on code by 
-;; Titus von der Malsburg." 
-;;   (interactive) 
-;;   (let ((dom (libxml-parse-html-region (point-min) (point-max))) 
-;;         (shr-inhibit-images t)) 
-;;     (erase-buffer) 
-;;     (shr-insert-document dom) 
-;;     (goto-char (point-min)))) 
+;; (defun mu4e-shr2text ()
+;;   "Html to text using the shr engine; this can be used in
+;; `mu4e-html2text-command' in a new enough emacs. Based on code by
+;; Titus von der Malsburg."
+;;   (interactive)
+;;   (let ((dom (libxml-parse-html-region (point-min) (point-max)))
+;;         (shr-inhibit-images t))
+;;     (erase-buffer)
+;;     (shr-insert-document dom)
+;;     (goto-char (point-min))))
 
 ;; make the `gnus-dired-mail-buffers' function also work on
 ;; message-mode derived modes, such as mu4e-compose-mode
@@ -82,20 +82,20 @@
                    (funcall pcomplete-command-completion-function)
                    (pcomplete-arg 'last) t))))))
 
-(defun insert-url-1 (url insert-func)  
+(defun insert-url-1 (url insert-func)
     (let* ((tem (funcall insert-func url)))
           (push-mark (+ (point) (car (cdr tem))))))
 
-(defun insert-url (url)  
+(defun insert-url (url)
     "Insert contents of URL into buffer after point.
     Set mark after the inserted text.
-    
+
     This function is meant for the user to run interactively.
-    Don't call it from programs! 
+    Don't call it from programs!
     Use `url-insert-file-contents' instead.
-    \(Its calling sequence is different; see its documentation)."  
-    (declare (interactive-only url-insert-file-contents))  
-    (interactive "*sInsert URL: ")  
+    \(Its calling sequence is different; see its documentation)."
+    (declare (interactive-only url-insert-file-contents))
+    (interactive "*sInsert URL: ")
     (insert-url-1 url #'url-insert-file-contents))
 
 (defun move-line-up ()
@@ -142,5 +142,47 @@
 ;;     (shell-command-to-string "wl-paste -n | tr -d \r")))
 ;; (setq interprogram-cut-function 'wl-copy)
 ;; (setq interprogram-paste-function 'wl-paste)
+
+;; Thanks to Bozhidar Batsov
+;; http://emacsredux.com/blog/2013/]05/22/smarter-navigation-to-the-beginning-of-a-line/
+(defun smarter-move-beginning-of-line (arg)
+  "Move point back to indentation of beginning of line.
+Move point to the first non-whitespace character on this line.
+If point is already there, move to the beginning of the line.
+Effectively toggle between the first non-whitespace character and
+the beginning of the line.
+If ARG is not nil or 1, move forward ARG - 1 lines first.  If
+point reaches the beginning or end of the buffer, stop there."
+  (interactive "^p")
+  (setq arg (or arg 1))
+
+  ;; Move lines first
+  (when (/= arg 1)
+    (let ((line-move-visual nil))
+      (forward-line (1- arg))))
+
+  (let ((orig-point (point)))
+    (back-to-indentation)
+    (when (= orig-point (point))
+      (move-beginning-of-line 1))))
+
+;; Many commands in Emacs write the current position into mark ring.
+;; These custom functions allow for quick movement backward and forward.
+;; For example, if you were editing line 6, then did a search with Cmd+f, did something and want to come back,
+;; press Cmd+, to go back to line 6. Cmd+. to go forward.
+;; These keys are chosen because they are the same buttons as < and >, think of them as arrows.
+(defun my-pop-local-mark-ring ()
+  (interactive)
+  (set-mark-command t))
+
+(defun unpop-to-mark-command ()
+  "Unpop off mark ring. Does nothing if mark ring is empty."
+  (interactive)
+      (when mark-ring
+        (setq mark-ring (cons (copy-marker (mark-marker)) mark-ring))
+        (set-marker (mark-marker) (car (last mark-ring)) (current-buffer))
+        (when (null (mark t)) (ding))
+        (setq mark-ring (nbutlast mark-ring))
+        (goto-char (marker-position (car (last mark-ring))))))
 
 (provide 'functions)

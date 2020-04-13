@@ -15,9 +15,17 @@
 (straight-use-package 'use-package)
 
 ;; docs: https://jwiegley.github.io/use-package/keywords/
-(use-package undo-tree)
+(use-package undo-tree
+  :diminish undo-tree-mode
+  :init
+  (progn
+    (global-undo-tree-mode)
+    (setq undo-tree-history-directory-alist '(("." . "~/.emacs.d/tmp/undo"))
+          undo-tree-auto-save-history t
+          undo-tree-visualizer-timestamps t
+          undo-tree-visualizer-diff t)))
+
 ;; (use-package browse-at-remote)
-;; (use-package deadgrep)
 ;; (use-package docker-compose-mode)
 (use-package magit)
 (use-package pacfiles-mode)
@@ -44,7 +52,8 @@
 
 (use-package which-key
   :config
-  (which-key-mode +1))
+  (which-key-mode +1)
+  (setq which-key-idle-delay 0.5))
 
 (use-package web-mode
   :mode ("\\.html$" . web-mode)
@@ -63,8 +72,10 @@
 
 (use-package projectile
   :config
+  (define-key projectile-mode-map (kbd "C-s-p") 'projectile-command-map) ;; Ctrl+Cmd+p show projectile menu
   (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
-  (projectile-mode +1))
+  (projectile-mode +1)
+)
 
 (use-package org
   :straight org-plus-contrib)
@@ -95,7 +106,7 @@
 
 ;; (use-package helm-dash)
 
-;; (use-package atomic-chrome 
+;; (use-package atomic-chrome
 ;;   :config
 ;;   (atomic-chrome-start-server)
 ;;   (setq atomic-chrome-buffer-open-style 'frame)
@@ -141,8 +152,8 @@
                       (when msg
                         (string-match-p "^/mborg" (mu4e-message-field msg :maildir))))
         ;; :match-func (lambda (msg)
-        ;;               (when msg 
-        ;;                 (mu4e-message-contact-field-matches msg 
+        ;;               (when msg
+        ;;                 (mu4e-message-contact-field-matches msg
         ;;                                                     :to "***REMOVED***")))
         :vars '( ( user-mail-address      . "***REMOVED***"  )
                  ( user-full-name         . "***REMOVED***" )
@@ -167,7 +178,7 @@
                                             "***REMOVED***\n"
                                             ))))
       ))
-  
+
   :custom
   (gnus-dired-mail-mode 'mu4e-user-agent)
   (mu4e-alert-interesting-mail-query "flag:unread AND NOT flag:trashed AND NOT flag:list")
