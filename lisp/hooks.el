@@ -31,4 +31,16 @@
 (add-hook 'prog-mode-hook #'linum-mode)
 ;; (add-hook 'python-mode-hook 'blacken-mode)
 
+;; Delete trailing spaces and add new line in the end of a file on save.
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+;; Revert (update) buffers automatically when underlying files are changed externally.
+(global-auto-revert-mode t)
+
+; Delete selected text when typing
+(delete-selection-mode 1)
+
+; y and n instead of yes and no everywhere else
+(fset 'yes-or-no-p 'y-or-n-p)
+
 (provide 'hooks)
