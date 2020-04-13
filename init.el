@@ -40,6 +40,7 @@
  '(helm-ff-file-name-history-use-recentf t)
  '(helm-ff-guess-ffap-urls nil)
  '(helm-mode t)
+ '(help-window-select t)
  '(inf-ruby-default-implementation "pry")
  '(inhibit-startup-screen t)
  '(initial-frame-alist '((vertical-scroll-bars) (fullscreen . maximized)))
