@@ -20,9 +20,7 @@
   :init
   (progn
     (global-undo-tree-mode)
-    (setq undo-tree-history-directory-alist '(("." . "~/.emacs.d/tmp/undo"))
-          undo-tree-auto-save-history t
-          undo-tree-visualizer-timestamps t
+    (setq undo-tree-visualizer-timestamps t
           undo-tree-visualizer-diff t)))
 
 ;; (use-package browse-at-remote)
