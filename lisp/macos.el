@@ -21,7 +21,7 @@
 (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
 
 ;; Font
-(set-face-attribute 'default nil :font "Fire Code Retina 15")
+(set-face-attribute 'default nil :font "Fira Code Retina 15")
 (setq-default line-spacing 2)
 
 ;; Show full path in the title bar.
