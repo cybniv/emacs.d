@@ -48,6 +48,7 @@
  '(initial-scratch-message nil)
  '(ispell-dictionary "deutsch")
  '(large-file-warning-threshold 100000000)
+ '(load-prefer-newer t)
  '(magit-diff-use-overlays nil)
  '(make-backup-files nil)
  '(menu-bar-mode nil)
