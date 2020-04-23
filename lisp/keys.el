@@ -28,52 +28,43 @@
 
 (global-set-key (kbd "C-x h") 'helm-command-prefix)
 (global-set-key (kbd "C-x g") 'magit-status)
-(global-set-key (kbd "C-x r") 'helm-recentf)
-(global-set-key (kbd "C-x C-r") 'helm-recentf)
-(global-set-key (kbd "C-x b") 'helm-mini)
+(global-set-key (kbd "M-r") 'helm-recentf)
+
+(global-set-key (kbd "M-b") 'helm-mini)
 
 (global-set-key (kbd "M-&") 'query-replace-regexp)
 (global-set-key (kbd "C-<down>") 'move-line-down)
 (global-set-key (kbd "C-<up>") 'move-line-up)
 (global-set-key (kbd "M-<return>") 'open-terminal-in-workdir)
 
-(global-set-key (kbd "s-x") 'helm-M-x)
-(global-set-key (kbd "s-y") 'helm-show-kill-ring)
-(global-set-key (kbd "s-g") 'goto-line)
-(global-set-key (kbd "s-o") 'other-window)
+(global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "M-y") 'helm-show-kill-ring)
+(global-set-key (kbd "M-g") 'goto-line)
+(global-set-key (kbd "M-o") 'other-window)
 
 ;; Things you'd expect from macOS app.
-(global-set-key (kbd "s-s") 'save-buffer)             ;; save
-(global-set-key (kbd "s-S") 'write-file)              ;; save as
-(global-set-key (kbd "s-q") 'save-buffers-kill-emacs) ;; quit
-(global-set-key (kbd "s-a") 'mark-whole-buffer)       ;; select all
-(global-set-key (kbd "s-z") 'undo-tree-undo)
-(global-set-key (kbd "s-Z") 'undo-tree-redo)
+(global-set-key (kbd "M-s") 'save-buffer)             ;; save
+(global-set-key (kbd "M-S") 'write-file)              ;; save as
+(global-set-key (kbd "M-q") 'save-buffers-kill-emacs) ;; quit
+(global-set-key (kbd "M-a") 'mark-whole-buffer)       ;; select all
+(global-set-key (kbd "M-z") 'undo-tree-undo)
+(global-set-key (kbd "M-Z") 'undo-tree-redo)
 
 ;; Use Cmd for movement and selection.
-(global-set-key (kbd "s-<right>") (kbd "C-e"))        ;; End of line
-(global-set-key (kbd "S-s-<right>") (kbd "C-S-e"))    ;; Select to end of line
-(global-set-key (kbd "s-<left>") (kbd "M-m"))         ;; Beginning of line (first non-whitespace character)
-(global-set-key (kbd "S-s-<left>") (kbd "M-S-m"))     ;; Select to beginning of line
-
-(global-set-key (kbd "s-<up>") 'beginning-of-buffer)  ;; First line
-(global-set-key (kbd "s-<down>") 'end-of-buffer)      ;; Last line
-
-(global-set-key (kbd "C-a") 'smarter-move-beginning-of-line)
-(global-set-key (kbd "s-<left>") 'smarter-move-beginning-of-line)
-
-(global-set-key (kbd "s-,") 'my-pop-local-mark-ring)
-(global-set-key (kbd "s-.") 'unpop-to-mark-command)
+;; (global-set-key (kbd "M-<right>") (kbd "C-e"))        ;; End of line
+;; (global-set-key (kbd "S-M-<right>") (kbd "C-S-e"))    ;; Select to end of line
+;; (global-set-key (kbd "s-<left>") (kbd "M-m"))         ;; Beginning of line (first non-whitespace character)
+;; (global-set-key (kbd "S-M-<left>") (kbd "M-S-m"))     ;; Select to beginning of line
 
 ;; Same keys with Shift will move you back and forward between open buffers.
-(global-set-key (kbd "s-<") 'previous-buffer)
-(global-set-key (kbd "s->") 'next-buffer)
+(global-set-key (kbd "M-<") 'previous-buffer)
+(global-set-key (kbd "M->") 'next-buffer)
 
 ;; Go to other windows easily with one keystroke Cmd-something.
-(global-set-key (kbd "s-1") (kbd "C-x 1"))  ;; Cmd-1 kill other windows (keep 1)
-(global-set-key (kbd "s-2") (kbd "C-x 2"))  ;; Cmd-2 split horizontally
-(global-set-key (kbd "s-3") (kbd "C-x 3"))  ;; Cmd-3 split vertically
-(global-set-key (kbd "s-0") (kbd "C-x 0"))  ;; Cmd-0...
-(global-set-key (kbd "s-w") (kbd "C-x 0"))  ;; ...and Cmd-w to close current window
+(global-set-key (kbd "M-1") (kbd "C-x 1"))  ;; Cmd-1 kill other windows (keep 1)
+(global-set-key (kbd "M-2") (kbd "C-x 2"))  ;; Cmd-2 split horizontally
+(global-set-key (kbd "M-3") (kbd "C-x 3"))  ;; Cmd-3 split vertically
+(global-set-key (kbd "M-0") (kbd "C-x 0"))  ;; Cmd-0...
+(global-set-key (kbd "M-w") (kbd "C-x 0"))  ;; ...and Cmd-w to close current window
 
 (provide 'keys)
