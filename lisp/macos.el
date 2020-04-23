@@ -20,10 +20,6 @@
 (add-to-list 'default-frame-alist '(ns-appearance . dark)) ;; {light, dark}
 (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
 
-;; Font
-(set-face-attribute 'default nil :font "Fira Code Retina 15")
-(setq-default line-spacing 2)
-
 ;; Show full path in the title bar.
 (setq-default frame-title-format "%b (%f)")
 
