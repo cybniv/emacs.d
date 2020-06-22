@@ -50,7 +50,10 @@
 (global-set-key (kbd "M-z") 'undo-tree-undo)
 (global-set-key (kbd "M-Z") 'undo-tree-redo)
 
-;; Use Cmd for movement and selection.
+(global-set-key (kbd "M-c") 'kill-ring-save)
+(global-set-key (kbd "M-v") 'yank)
+
+;; use Cmd for movement and selection.
 ;; (global-set-key (kbd "M-<right>") (kbd "C-e"))        ;; End of line
 ;; (global-set-key (kbd "S-M-<right>") (kbd "C-S-e"))    ;; Select to end of line
 ;; (global-set-key (kbd "s-<left>") (kbd "M-m"))         ;; Beginning of line (first non-whitespace character)
