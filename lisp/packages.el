@@ -102,7 +102,7 @@
     (require 'helm-config)
     (helm-mode)))
 
-;; (use-package helm-dash)
+(use-package dash-at-point)
 
 ;; (use-package atomic-chrome
 ;;   :config
