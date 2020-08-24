@@ -13,8 +13,9 @@
   (load bootstrap-file nil 'nomessage))
 
 (straight-use-package 'use-package)
-
 ;; docs: https://jwiegley.github.io/use-package/keywords/
+
+
 (use-package undo-tree
   :diminish undo-tree-mode
   :init
@@ -23,8 +24,7 @@
     (setq undo-tree-visualizer-timestamps t
           undo-tree-visualizer-diff t)))
 
-;; (use-package browse-at-remote)
-;; (use-package docker-compose-mode)
+(use-package docker-compose-mode)
 (use-package magit)
 (use-package pacfiles-mode)
 (use-package pkgbuild-mode)
@@ -33,11 +33,6 @@
 
 (use-package deadgrep)
 (use-package dumb-jump)
-;; (use-package tern)
-
-(use-package python-black
-  :demand t
-  :after python)
 
 (use-package rainbow-delimiters
   :init
@@ -55,23 +50,11 @@
 
 (use-package web-mode
   :mode ("\\.html$" . web-mode)
-  :init
-  (setq web-mode-markup-indent-offset 2)
-  (setq web-mode-code-indent-offset 2)
-  (setq web-mode-css-indent-offset 2)
-  (setq js-indent-level 2)
-  (setq web-mode-enable-auto-pairing t)
-  (setq web-mode-enable-auto-expanding t)
-  (setq web-mode-enable-css-colorization t))
-
-;; (use-package inf-ruby
-;;   :hook ((ruby-mode . inf-ruby-minor-mode)
-;; 	 (compilation-filter . inf-ruby-auto-enter)))
+  :init)
 
 (use-package projectile
   :config
-  (define-key projectile-mode-map (kbd "C-s-p") 'projectile-command-map) ;; Ctrl+Cmd+p show projectile menu
-  (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+  (define-key projectile-mode-map (kbd "M-p") 'projectile-command-map)
   (projectile-mode +1)
 )
 
