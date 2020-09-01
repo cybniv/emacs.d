@@ -13,13 +13,6 @@
 ; brew install coreutils
 (setq insert-directory-program "gls")
 
-;; =======
-;; VISUALS
-
-;; Enable transparent title bar on macOS
-(add-to-list 'default-frame-alist '(ns-appearance . dark)) ;; {light, dark}
-(add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
-
 ;; Show full path in the title bar.
 (setq-default frame-title-format "%b (%f)")
 
