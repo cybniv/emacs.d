@@ -43,7 +43,6 @@
  '(help-window-select t)
  '(inf-ruby-default-implementation "pry")
  '(inhibit-startup-screen t)
- '(initial-frame-alist '((vertical-scroll-bars) (fullscreen . maximized)))
  '(initial-major-mode 'org-mode)
  '(initial-scratch-message nil)
  '(ispell-dictionary "deutsch")
