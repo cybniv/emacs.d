@@ -63,11 +63,11 @@
 (global-set-key (kbd "M-<") 'previous-buffer)
 (global-set-key (kbd "M->") 'next-buffer)
 
-;; Go to other windows easily with one keystroke Cmd-something.
-(global-set-key (kbd "M-1") (kbd "C-x 1"))  ;; Cmd-1 kill other windows (keep 1)
-(global-set-key (kbd "M-2") (kbd "C-x 2"))  ;; Cmd-2 split horizontally
-(global-set-key (kbd "M-3") (kbd "C-x 3"))  ;; Cmd-3 split vertically
-(global-set-key (kbd "M-0") (kbd "C-x 0"))  ;; Cmd-0...
-(global-set-key (kbd "M-w") (kbd "C-x 0"))  ;; ...and Cmd-w to close current window
+;; Go to other windows easily with one keystroke opt-something.
+(global-set-key (kbd "H-1") (kbd "C-x 1"))  ;; Cmd-1 kill other windows (keep 1)
+(global-set-key (kbd "H-2") (kbd "C-x 2"))  ;; Cmd-2 split horizontally
+(global-set-key (kbd "H-3") (kbd "C-x 3"))  ;; Cmd-3 split vertically
+(global-set-key (kbd "H-0") (kbd "C-x 0"))  ;; Cmd-0...
+(global-set-key (kbd "H-w") (kbd "C-x 0"))  ;; ...and Cmd-w to close current window
 
 (provide 'keys)
