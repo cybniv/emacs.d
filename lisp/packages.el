@@ -25,6 +25,7 @@
           undo-tree-visualizer-diff t)))
 
 (use-package docker-compose-mode)
+(use-package dockerfile-mode)
 (use-package magit)
 (use-package pacfiles-mode)
 (use-package pkgbuild-mode)
