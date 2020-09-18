@@ -72,6 +72,8 @@
  '(mml-secure-openpgp-encrypt-to-self t)
  '(mouse-wheel-progressive-speed nil)
  '(mouse-wheel-scroll-amount '(1 ((shift) . 1) ((control))))
+ '(org-agenda-files
+   '("~/Library/Mobile Documents/iCloud~com~appsonthemove~beorg/Documents/org"))
  '(org-babel-load-languages '((emacs-lisp . t) (ruby . t)))
  '(org-deadline-warning-days 7)
  '(org-hide-emphasis-markers t)
