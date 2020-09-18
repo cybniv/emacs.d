@@ -48,6 +48,7 @@
  '(ispell-dictionary "deutsch")
  '(large-file-warning-threshold 100000000)
  '(load-prefer-newer t)
+ '(mac-mouse-wheel-smooth-scroll nil)
  '(mac-option-modifier '(:ordinary hyper :function alt :mouse alt))
  '(mac-right-option-modifier nil)
  '(magit-diff-use-overlays nil)
