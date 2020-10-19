@@ -15,52 +15,43 @@
 (straight-use-package 'use-package)
 ;; docs: https://jwiegley.github.io/use-package/keywords/
 
-
-(use-package undo-tree
-  :diminish undo-tree-mode
-  :init
-  (progn
-    (global-undo-tree-mode)
-    (setq undo-tree-visualizer-timestamps t
-          undo-tree-visualizer-diff t)))
-
+(use-package deadgrep)
 (use-package docker-compose-mode)
 (use-package dockerfile-mode)
+(use-package dumb-jump
+  :config
+  (add-hook 'xref-backend-functions #'dumb-jump-xref-activate)
+  )
 (use-package magit)
-(use-package pacfiles-mode)
-(use-package pkgbuild-mode)
-(use-package terraform-mode)
-(use-package yaml-mode)
-
-(use-package deadgrep)
-(use-package dumb-jump)
-
-(use-package rainbow-delimiters
-  :init
-  (add-hook 'prog-mode-hook #'rainbow-delimiters-mode))
-
-(use-package rainbow-identifiers
-  :init
-  :config
-  (add-hook 'prog-mode-hook #'rainbow-identifiers-mode))
-
-(use-package which-key
-  :config
-  (which-key-mode +1)
-  (setq which-key-idle-delay 0.5))
-
-(use-package web-mode
-  :mode ("\\.html$" . web-mode)
-  :init)
-
-(use-package projectile
-  :config
-  (define-key projectile-mode-map (kbd "M-p") 'projectile-command-map)
-  (projectile-mode +1)
-)
-
 (use-package org
   :straight org-plus-contrib)
+(use-package pacfiles-mode)
+(use-package persp-projectile
+  :requires projectile)
+(use-package pkgbuild-mode)
+(use-package projectile
+  :bind-keymap
+  ("M-p" . projectile-command-map)
+  :config
+  (projectile-mode +1))
+(use-package rainbow-delimiters
+  :hook prog-mode)
+(use-package rainbow-identifiers
+  :hook prog-mode)
+(use-package terraform-mode)
+(use-package undo-tree
+  :init
+  (setq undo-tree-visualizer-timestamps t)
+  (setq undo-tree-visualizer-diff t)
+  :config
+  (global-undo-tree-mode))
+(use-package which-key
+  :config
+  (setq which-key-idle-delay 0.5))
+  (which-key-mode +1)
+(use-package web-mode
+  :mode ("\\.html$" . web-mode))
+(use-package yaml-mode)
 
 ;; (use-package org-journal
 ;;   :after org
@@ -111,8 +102,7 @@
 ;; 			      :repo "Alexander-Miller/i3wm-Config-Mode"))
 
 (use-package markdown-mode
-  :mode (("README\\.md\\'" . gfm-mode)
-         ("\\.md\\'" . gfm-mode)
+  :mode (("\\.md\\'" . gfm-mode)
          ("\\.markdown\\'" . markdown-mode))
   :init (setq markdown-command "pandoc"))
 
