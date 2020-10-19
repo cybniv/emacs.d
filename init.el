@@ -80,9 +80,11 @@
  '(projectile-completion-system 'helm)
  '(projectile-enable-caching t)
  '(projectile-globally-ignored-directories
-   '(".idea" ".ensime_cache" ".eunit" ".git" ".hg" ".fslckout" "_FOSSIL_" ".bzr" "_darcs" ".tox" ".svn" ".stack-work" "fixtures" "vendor/bundle" "vendor/cache" "locale"))
+   '(".idea" ".ensime_cache" ".eunit" ".git" ".hg" ".fslckout" "_FOSSIL_" ".bzr" "_darcs" ".tox" ".svn" ".stack-work" "fixtures" "vendor/bundle" "vendor/cache" "locale" "LC_MESSAGES"))
  '(projectile-globally-ignored-file-suffixes '(".pyc"))
- '(projectile-project-search-path '("~/***REMOVED***"))
+ '(projectile-globally-ignored-files '("TAGS"))
+ '(projectile-indexing-method 'native)
+ '(projectile-project-search-path '("~/pp"))
  '(projectile-switch-project-action 'projectile-dired)
  '(recentf-max-menu-items 27)
  '(recentf-max-saved-items nil)
