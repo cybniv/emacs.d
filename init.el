@@ -94,9 +94,7 @@
  '(rst-indent-literal-minimized 4)
  '(rst-indent-literal-normal 4)
  '(ruby-insert-encoding-magic-comment nil)
- '(safe-local-variable-values
-   '((TeX-command-extra-options . "-shell-escape")
-     (TeX-command-extra-options . -shell-escape)))
+ '(safe-local-variable-values '((TeX-command-extra-options . "-shell-escape")))
  '(savehist-file "~/.cache/emacs/history")
  '(scroll-bar-mode nil)
  '(scroll-margin 10)
