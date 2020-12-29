@@ -47,8 +47,6 @@
  '(ispell-dictionary "deutsch")
  '(load-prefer-newer t)
  '(mac-mouse-wheel-smooth-scroll nil)
- '(mac-option-modifier '(:ordinary hyper :function alt :mouse alt))
- '(mac-right-option-modifier nil)
  '(magit-diff-use-overlays nil)
  '(make-backup-files nil)
  '(menu-bar-mode nil)
@@ -59,6 +57,9 @@
  '(mml-secure-openpgp-encrypt-to-self t)
  '(mouse-wheel-progressive-speed nil)
  '(mouse-wheel-scroll-amount '(1 ((shift) . 1) ((control))))
+ '(ns-alternate-modifier 'none)
+ '(ns-command-modifier 'meta)
+ '(ns-right-alternate-modifier nil)
  '(org-agenda-files
    '("~/Library/Mobile Documents/iCloud~com~appsonthemove~beorg/Documents/org"))
  '(org-archive-location "archive/a_%s::b")
