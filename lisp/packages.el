@@ -85,13 +85,11 @@
 ;;   (setq atomic-chrome-buffer-open-style 'frame)
 ;;   )
 
-(use-package dracula-theme
-  ;; :straight (dracula-theme :type git
-  ;; 			   :host github
-  ;; 			   :repo "dracula/emacs"
-  ;; 			   :branch "emacs-27")
-  :init (load-theme 'dracula t))
+;; (use-package dracula-theme
+;;   :init (load-theme 'dracula t))
 
+(use-package gotham-theme
+  :init (load-theme 'gotham t))
 
 ;; (use-package i3wm-config-mode
 ;;   :straight (i3wm-config-mode :type git
