@@ -16,6 +16,9 @@
 ;; docs: https://jwiegley.github.io/use-package/keywords/
 
 (use-package deadgrep)
+(use-package direnv
+ :config
+ (direnv-mode))
 (use-package docker-compose-mode)
 (use-package dockerfile-mode)
 (use-package dumb-jump
