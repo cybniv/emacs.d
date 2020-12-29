@@ -104,7 +104,6 @@
  '(show-paren-mode t)
  '(sort-fold-case t t)
  '(straight-recipes-emacsmirror-use-mirror t)
- '(straight-repository-branch "develop")
  '(straight-use-package-by-default t)
  '(term-buffer-maximum-size 4096)
  '(tool-bar-mode nil)
