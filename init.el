@@ -58,6 +58,7 @@
  '(mml-secure-openpgp-encrypt-to-self t)
  '(mouse-wheel-progressive-speed nil)
  '(mouse-wheel-scroll-amount '(1 ((shift) . 1) ((control))))
+ '(mu4e-get-mail-command "mbsync -aV")
  '(ns-alternate-modifier 'none)
  '(ns-command-modifier 'meta)
  '(ns-right-alternate-modifier nil)
