@@ -47,6 +47,7 @@
  '(ispell-dictionary "deutsch")
  '(load-prefer-newer t)
  '(mac-mouse-wheel-smooth-scroll nil)
+ '(magit-diff-refine-hunk t)
  '(magit-diff-use-overlays nil)
  '(make-backup-files nil)
  '(menu-bar-mode nil)
