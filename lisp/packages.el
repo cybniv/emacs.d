@@ -92,9 +92,6 @@
   ;; 			   :branch "emacs-27")
   :init (load-theme 'dracula t))
 
-(use-package editorconfig
-  :config
-  (editorconfig-mode 1))
 
 ;; (use-package i3wm-config-mode
 ;;   :straight (i3wm-config-mode :type git
