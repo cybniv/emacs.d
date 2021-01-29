@@ -38,9 +38,9 @@
   :config
   (projectile-mode +1))
 (use-package rainbow-delimiters
-  :hook prog-mode)
+  :hook (prog-mode . rainbow-delimiters-mode))
 (use-package rainbow-identifiers
-  :hook prog-mode)
+  :hook (prog-mode . rainbow-identifiers-mode))
 (use-package terraform-mode)
 (use-package undo-tree
   :init
