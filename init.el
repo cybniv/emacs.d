@@ -4,14 +4,6 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(TeX-engine 'xetex)
- '(TeX-view-program-selection
-   '(((output-dvi has-no-display-manager)
-      "dvi2tty")
-     ((output-dvi style-pstricks)
-      "dvips and gv")
-     (output-dvi "xdvi")
-     (output-pdf "Atril")
-     (output-html "xdg-open")))
  '(auto-save-default nil)
  '(blacken-skip-string-normalization t)
  '(column-number-mode t)
@@ -19,7 +11,6 @@
  '(confirm-kill-emacs 'y-or-n-p)
  '(current-language-environment "UTF-8")
  '(custom-enabled-themes '(dracula))
- '(custom-safe-themes t)
  '(delete-by-moving-to-trash t)
  '(delete-old-versions t)
  '(describe-char-unidata-list
