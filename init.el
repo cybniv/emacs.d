@@ -24,9 +24,6 @@
  '(delete-old-versions t)
  '(describe-char-unidata-list
    '(name old-name general-category decomposition decimal-digit-value digit-value numeric-value mirrored iso-10646-comment))
- '(dired-listing-switches "-laGh1v --group-directories-first")
- '(dired-ls-F-marks-symlinks t)
- '(dired-use-ls-dired t)
  '(display-time-24hr-format t)
  '(display-time-day-and-date t)
  '(display-time-mode t)

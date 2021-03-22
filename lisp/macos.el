@@ -11,7 +11,7 @@
   (exec-path-from-shell-initialize))
 
 ; brew install coreutils
-(setq insert-directory-program "gls")
+(setq insert-directory-program "/usr/local/bin/gls")
 
 ;; Show full path in the title bar.
 (setq-default frame-title-format "%b (%f)")
