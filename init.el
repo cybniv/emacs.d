@@ -28,6 +28,7 @@
  '(helm-ff-file-name-history-use-recentf t)
  '(helm-ff-guess-ffap-urls nil)
  '(help-window-select t)
+ '(indent-tabs-mode nil)
  '(inf-ruby-default-implementation "pry")
  '(inhibit-startup-screen t)
  '(initial-major-mode 'org-mode)
